@@ -1,0 +1,12 @@
+*** Difference between website and Web Application
+    ==> Everybody can access websites. But web application has limited access or predifined access.
+
+### we can work with php language in two diferent ways.
+    ==> 1.Procedural way 2. Object Oriented way
+
+*** Procedural Way: There is no strick rules of programming in the  Procedural way.
+
+### Object Oriented way: There is a set of rules of programming in the Object Oriented way.
+
+### The main things are about OOP:
+    a. Class b. Property c. Method d. Object

@@ -1,0 +1,15 @@
+## There are so many ports in the ram
+xampp by default run in 80 port on ram.
+
+## When port 80 is busy. Then we have to change the port to run apache server.
+
+## How to change the port
+==> 1. Go to xampp control panel > Apache config
+    2. In the file httpd.conf, find the line "Listen 80" and "ServerName    localhost:80"
+    3. Then, change it like "Listen 8080" and "ServerName localhost:8080"
+    4. Then, save it.
+    5. Start the apache server.
+
+## To rename a folder we should follow "php-day-2" or "php_day_2". "php-day-2" is a best practice.
+
+## Class name always should capitalized like "HelloWorld" and variable name should always be camelcase like "$helloWorld".
