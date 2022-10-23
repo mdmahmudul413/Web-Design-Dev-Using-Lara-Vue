@@ -13,3 +13,27 @@ xampp by default run in 80 port on ram.
 ## To rename a folder we should follow "php-day-2" or "php_day_2". "php-day-2" is a best practice.
 
 ## Class name always should capitalized like "HelloWorld" and variable name should always be camelcase like "$helloWorld".
+
+## Magic Method: The method that starts with "__" is called magic method. These methods are by default created by php. Magic methods are call automatically when class object is created. We can't change the spelling of magic methods.  example: __construct(){}, __destruct(){} etc.
+
+## Own class object($this): '$this' is called the own class object. To catch the class property, we have to use '$this' keywords.
+
+## String sign = ' ', " "
+
+## Composer: The dependency manager of php. PHP classes are resources. To load or manage php classes we need composer.
+
+## "require"(composer.json): It contains the 3rd party resource details. It only holds the details of 3rd party resource. The resources who don't change the file structure.
+
+## "require-dev"(composer.json): It also contains the 3rd party resource details. It holds the details of 3rd party resource and also responsible for the changing of file structure.
+
+## "autoload"(composer.json): From "autoload", we can know how the resources will automatically load.
+
+## "psr-4"(composer.json): 'psr-4' is a convention. It means its a Constitution of autoloading php resources.
+
+## "App\\"(composer.json): This is the first word of class namespace.
+
+## "app//"(composer.json): This is the name of 'app' folder of our file structure which is the root of 'classes' folder.
+
+## Suggestion: To get suggestion from IDE we have to press ctrl+space.
+
+## PHP opening(<?php) and closing(?>): The script where we write only php codes, then if we want to ignore the php closing syntax, we can ignore it.

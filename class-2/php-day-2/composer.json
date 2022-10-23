@@ -3,6 +3,7 @@
   "type": "project",
   "description": "A simple php project",
   "keyworda": [],
+  "license": "",
   "require": {},
   "require-dev": {},
   "autoload": {
