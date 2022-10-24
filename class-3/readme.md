@@ -12,7 +12,6 @@
 11. Data Type
 12. parse error, fatal error
 13. concatenation sign(.)
-14. &nbsp; (To take more than one space)
-15. Operator
+14. Operator
 
 
