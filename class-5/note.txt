@@ -65,4 +65,25 @@
     b. Conditional Statement
     c. Repeated Statement
 
+## Single Line Statement:
+           $this->numberOne = 10;
+           $this->numberTwo = 20;
+           $this->numberThree = 30;
+           echo $this->numberOne;
+   ** These are single line statements
+
+## Conditional Statement: Conditional Statements will work when a condition is true.
+
+## Syntax of conditional statement:
+            a. if
+            b. if else
+            c. if else if
+            d. switch
+
+## Behaviour of conditional statement "if else if":
+        This "if else if" conditional scope will execute the first statement which condition is true. After executing the first statement which condition is true, it will not execute the remaining true condition. But if we create the conditional block with only "if" syntax than, all the true condition statement will execute.
+
+## Behaviour of conditional statement "switch":
+    When switch get the first true case then, it will find only the 'break;'. So that if we don't use 'break;' then switch will execute all of the statement after the true case.
+
 

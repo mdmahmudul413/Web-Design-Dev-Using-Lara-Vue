@@ -95,9 +95,9 @@ class HelloWorld
 
 //    Logical Operator Example
 
-        $this->numberOne = 10;
-        $this->numberTwo = 20;
-        $this->numberThree = 30;
+//        $this->numberOne = 10;
+//        $this->numberTwo = 20;
+//        $this->numberThree = 30;
 
 
 //        echo ($this->numberOne > $this->numberTwo) && ($this->numberTwo < $this->numberThree);
@@ -109,14 +109,86 @@ class HelloWorld
 //        echo ($this->numberOne < $this->numberTwo) && ($this->numberTwo < $this->numberThree);
 //        echo "<br>";
 
-        echo ($this->numberOne > $this->numberTwo) || ($this->numberTwo < $this->numberThree);
-        echo "<br>";
-        echo ($this->numberOne < $this->numberTwo) || ($this->numberTwo > $this->numberThree);
-        echo "<br>";
-        echo ($this->numberOne > $this->numberTwo) || ($this->numberTwo > $this->numberThree);
-        echo "<br>";
-        echo ($this->numberOne < $this->numberTwo) || ($this->numberTwo < $this->numberThree);
-        echo "<br>";
+//        echo ($this->numberOne > $this->numberTwo) || ($this->numberTwo < $this->numberThree);
+//        echo "<br>";
+//        echo ($this->numberOne < $this->numberTwo) || ($this->numberTwo > $this->numberThree);
+//        echo "<br>";
+//        echo ($this->numberOne > $this->numberTwo) || ($this->numberTwo > $this->numberThree);
+//        echo "<br>";
+//        echo ($this->numberOne < $this->numberTwo) || ($this->numberTwo < $this->numberThree);
+//        echo "<br>";
+
+//        Single Line Statement
+//        $this->numberOne = 10;
+//        $this->numberTwo = 20;
+//        $this->numberThree = 30;
+//        echo $this->numberOne;
+//        These are single line statements
+
+//        Conditional Statement
+
+//        Example: if
+//        if($this->numberOne > 100){
+//            echo $this->numberOne; // This is a conditional statement
+//        }
+
+
+//        Example: if else
+//        if($this->numberOne > 100){
+//            echo $this->numberOne; // This is a conditional statement
+//        }
+//        else{
+//            echo "Hello World";
+//        }
+
+//        Example: if else if
+//        $this->numberOne = 10;
+//        $this->numberTwo = 20;
+//        $this->numberThree = 30;
+//
+//        if($this->numberOne > $this->numberTwo){
+//            echo $this->numberOne; // This is a conditional statement
+//        }
+//        else if($this->numberTwo > $this->numberThree){
+//            echo "Hello World";
+//        }
+//        else{
+//            echo 'Bangladesh';
+//        }
+
+
+//        Example: switch
+//        $this->numberOne = 10;
+//
+//        switch ($this->numberOne){
+//            case 7:
+//                echo $this->numberOne;
+//                break;
+//            case 8:
+//                echo $this->numberOne;
+//                break;
+//            case 9:
+//                echo $this->numberOne;
+//                break;
+//            case 10:
+//                echo $this->numberOne;
+//                break;
+//            case 11:
+//                echo $this->numberOne;
+//                break;
+//            case 12:
+//                echo $this->numberOne;
+//                break;
+//            default:
+//                echo "Sorry";
+//        }
+
+
+
+
+
+
+
 
     }
 }

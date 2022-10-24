@@ -12,5 +12,10 @@
 12. Difference between Logical and other operator
 13. Behaviour of "&&, "||", "!" 
 14. Logical operator example 
-15. 3 types of statement
+15. 3 types of statement(Single Line, Conditional, Repeated)
+13. Syntax of conditional statement(if, if else, if else if, switch)
+14. Behaviour of conditional statement "if else if"
+15. Example of conditional statement (if, if else, if else if, switch)
+16. Behaviour of conditional statement "switch"
+
 
