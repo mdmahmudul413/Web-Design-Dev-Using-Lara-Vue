@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="345a33a0-b8ee-4e2f-b5ab-8b5ba5c3c540" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/php-day-3/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php-day-3/app/classes/HelloWorld.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/php-day-3/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/php-day-3/vendor/composer" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="2GW3Lo642mkzvCwrZvK5zrslAyD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../class-5" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="345a33a0-b8ee-4e2f-b5ab-8b5ba5c3c540" name="Default Changelist" comment="" />
+      <created>1666490458020</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666490458020</updated>
+      <workItem from="1666490459541" duration="1883000" />
+      <workItem from="1666492584354" duration="6160000" />
+      <workItem from="1666514429774" duration="791000" />
+      <workItem from="1666515327033" duration="672000" />
+      <workItem from="1666527876690" duration="3946000" />
+      <workItem from="1666539539131" duration="210000" />
+      <workItem from="1666575292267" duration="3733000" />
+      <workItem from="1666590818598" duration="633000" />
+      <workItem from="1666591608569" duration="24000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="370" y="84" key="FileChooserDialogImpl" timestamp="1666591630473">
+      <screen x="0" y="0" width="1093" height="574" />
+    </state>
+    <state x="370" y="84" key="FileChooserDialogImpl/0.0.1093.574@0.0.1093.574" timestamp="1666591630473" />
+    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1666575342967" />
+    <state x="0" y="30" key="SettingsEditor" timestamp="1666577403619">
+      <screen x="0" y="0" width="1093" height="574" />
+    </state>
+    <state x="0" y="30" key="SettingsEditor/0.0.1093.574@0.0.1093.574" timestamp="1666577403619" />
+    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1666500974734" />
+    <state x="210" y="0" width="673" height="573" key="search.everywhere.popup" timestamp="1666590871652">
+      <screen x="0" y="0" width="1093" height="574" />
+    </state>
+    <state x="210" y="0" width="673" height="573" key="search.everywhere.popup/0.0.1093.574@0.0.1093.574" timestamp="1666590871652" />
+    <state x="262" y="0" width="840" height="726" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1666575644382" />
+  </component>
+</project>

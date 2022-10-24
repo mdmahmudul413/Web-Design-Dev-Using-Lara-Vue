@@ -1,0 +1,42 @@
+## include, include_once: These keywords are used to link html files.
+
+## require, require_once: These keywords are used to link php files with other php files.
+
+## Object Sign of PHP(->): In the form of php language, this is not a right arrow. This is php object sign. When we use php object sign after a variable then it becomes an object of a particular class.
+
+## The standard writing style of creating an object: The standard style of creating an object of an particular class is the variable name will same to the class name but variable name will be written in camelcase and the class name will be written in the capitalized form.
+
+## camelCase, capitalized, Zend(The writing styles): camelCase: $helloWorld, capitalized: $HelloWorld,  Zend: $hello_world
+
+## The most important topic to work with php:
+        1. Variable 2. Operator 3. Statement 4. Array
+
+## Variable: variable is not a container. This is actually the name of the memory location.
+
+## The rules for declaring php variable: There are 2 types of rules.
+    a. Three major rules
+        * Starts with $
+        * We can use a-z, A-Z, 0-9, '-'
+        * No number in first
+    b. Three Standard rules(standard rules are same for all language)
+        * Start with small letter
+        * Meaning full
+        * Readable
+
+## variable = property = attribute, function = method = behavior
+
+## gettype(): this is a builtin function of php which return the data type.
+
+## Data Type: Generally 4 types of data in php: 1. integer 2. double 3. string 4. boolean
+
+## parse error: parse error means syntax error.
+
+## fatal error: fatal error means logical error.
+
+## concatenation sign(.): This is the string concatenation sign.
+
+## Operator: 4 types of operator
+    a. Arithmetic operator: +, _, *, /, %, ++, __, (-)(negation)
+    b. Assignment operator: =, +=, _=, *=, /=, %=, .=
+    c. Conditional operator: >, <, >=, <=, ==, !=, ===, !==
+    d. Logical operator: &&, || , !
