@@ -1,8 +1,10 @@
-Class 1
+**Class 1:**
+
     1. Basic php OOP structure.
     2. A php OOP project of showing "Hello World" output in the browser.
 
-Class 2:
+**Class 2:**
+
     1. Changing the port of Apache server.
     2. How to rename a folder.
     3. How to rename a file name.
@@ -16,7 +18,8 @@ Class 2:
     11. Suggestion from IDE(phpstrom)
     12. PHP opening(<?php) and closing(?>) 
 
-Class 3:
+**Class 3:**
+
     1. Again PHP OOP file structure
     2. include, include_once, require, require_once
     3. Object Sign of PHP(->)
@@ -34,7 +37,8 @@ Class 3:
     14. &nbsp; (To take more than one space)
     15. Operator
 
-Class 5:
+**Class 5:**
+
     1. Fatal error: Uncaught ArgumentCountError
     2. Declaring variable inside function is a bad practice
     3. Operator(Definition)
