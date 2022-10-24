@@ -1,0 +1,68 @@
+## "Fatal error: Uncaught ArgumentCountError: Too few arguments to function App\classes\HelloWorld::__construct(), 0 passed" it means class constructor has some arguments but when class object is created then, no arguments pass.
+
+## Declaring variable inside function is a bad practice: Declaring variable inside function is a bad practice. We will declare variable as property inside class.
+
+## Operator: Operators are some special syntax which are used to perform some execution inside our program.
+
+## "echo $this->numberOne++;" Statement execution process:
+
+ ==> A statement is created with 4 elements. Every programing language follow this thing.
+
+        The elements are,
+        1. syntax or keyword
+
+        2. Value
+                a.fixed value: 10, 20, 30, 40
+                b.variable value: x = 10, x = 100(Both correct)
+
+        3. Operator
+
+        4. Expression: Expression is created with value and operator.
+                       example: x + y = 20
+
+ In the above statement, here:
+        1. syntax: "echo", "$", "this", "->", ";"
+        2. Value: "$this->numberOne"(variable value)
+        3. Operator: "++"
+        4. Expression: "numberOne++"
+
+ ==> "echo $this->numberOne++;" this is an statement. A statement executes in the server part by part.
+
+        apache server first execute "echo $this->numberOne" then "++". So that firstly, we will see the general value of numberOne in the browser. Then apache server execute the incrementation "++". The incrementation will execute after the execution of "echo $this->numberOne". So now if we echo numberOne again, we will see the latest value.
+
+ ==> "echo ++$this->numberOne;" Statement execution process: In this case we will see the latest value in the browser because the incrementation will execute first.
+
+## Negation: x = 1;
+             echo -x;(negation)
+             result = -1
+
+             x = -1;
+             echo -x;(negation)
+             result = 1
+
+## Difference between Logical and other operator: Other operators work with single value but Logical operator does not work with single value. Logical operator works with condition.
+
+## Behaviour of '&&', '||', '!':
+
+    1. '&&', || operators work with at least two condition.
+
+    2. There is a condition pattern. If there are two conditions. The pattern will be 2^2=4 combination. If 3, the pattern will be 2^3=8 combination.
+
+    3. When operator is &&. And there are two conditions.
+       T && T = T
+       T && F = F
+       F && T = F
+       F && F = F
+
+    4. When operator is ||. And there are two conditions.
+       T || T = T
+       T || F = T
+       F || T = T
+       F || F = F
+
+## 3 types of statement:
+    a. Single Line Statement
+    b. Conditional Statement
+    c. Repeated Statement
+
+
