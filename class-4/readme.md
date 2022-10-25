@@ -1,0 +1,1 @@
+1. Class one to class three was repeated for the new comers. 
