@@ -3,15 +3,23 @@ namespace App\classes;
 
 class HelloWorld
 {
-    public $numberOne;
-    public $numberTwo;
-    public $numberThree;
+    public $message;
+    public $i;
+
     public function __construct()
     {
-        $this->message = "hello";
+        $this->message = "Hello World";
     }
 
     public function index(){
-        echo $this->message;
+//        Repeated Statement(for, while, do while, foreach)
+////        Repeated statement "for" example
+//        for ($this->i = 10; $this->i > 15; $this->i++){
+//            echo $this->message; //false condition
+//        }
+
+        for ($this->i = 10; $this->i < 15; $this->i++){
+            echo $this->message . "<br>"; //true condition
+        }
     }
 }

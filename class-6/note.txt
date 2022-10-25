@@ -1,0 +1,48 @@
+## Works of a constructor: The main work of a constructor is to
+assign value to the property. To ensure the database connection
+is another task of constructor.
+
+## Repeated Statement:
+        1.for
+        2. while
+        3. do while
+        4. foreach
+
+## Repeated statement "for" example:
+
+    for ($this->i = 10; $this->i > 15; $this->i++){
+         echo $this->message;
+    }
+
+    There are three parts in a for loop
+
+        1. Initialization: $this->i = 10;
+
+        2. Condition: $this->i > 15;
+
+        3. Increment/Decrement: $this->i++
+
+        *** In the for loop if the condition is false, it will not
+        enter the loop block or will not execute the statements
+        inside for loop.
+
+## Working process of "for" loop:
+
+==> We will consider the execution of upper for loop.
+ There are three parts in a for loop. At first for loop initialize
+ the variable "$this->i = 10;". so now the value of $i is 10. Then
+ it will consider the condition part "$this->i > 15;". If the
+ condition is true then, it will enter the loop block otherwise not.
+ Here condition is false. If the condition was true, it will enter
+ the loop block and execute the statement. After execution now it
+ will consider the increment/decrement part "$this->i++". After
+ increment $i with 1 now the value of $i is 11. Now again it will
+ consider the condition. After that if the condition true, it will
+ enter the for loop block and execute the statement. Then again it
+ will consider the increment/decrement part. Then it will consider
+ the condition part. And if the condition again true, it will enter
+ the for loop block and execute the statement and so on until the
+ condition false.
+
+## "for" loop is working anti clock wise behavior:
+    In the above execution of "for" loop.
