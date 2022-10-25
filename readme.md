@@ -38,8 +38,9 @@
     15. Operator
 
 **Class 4:**
-    1. Class one to class three was repeated for the new comers.
 
+    1. Class one to class three was repeated for the new comers.
+    
 **Class 5:**
 
     1. Fatal error: Uncaught ArgumentCountError
