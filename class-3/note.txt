@@ -1,6 +1,6 @@
-## include, include_once: These keywords are used to link html files.
+## include, include_once: These keywords are used to link that kind of php files where other codes like css, html etc. are available.
 
-## require, require_once: These keywords are used to link php files with other php files.
+## require, require_once: These keywords are used to link php files with other php files where only the php codes are available.
 
 ## Object Sign of PHP(->): In the form of php language, this is not a right arrow. This is php object sign. When we use php object sign after a variable then it becomes an object of a particular class.
 
