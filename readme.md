@@ -63,7 +63,7 @@
     18. Example of conditional statement (if, if else, if else if, switch)
     19. Behaviour of conditional statement "switch"
     
-**Class 5:**
+**Class 6:**
 
     1. Works of a constructor
     2. Repeated Statement(for, while, do while, foreach)
