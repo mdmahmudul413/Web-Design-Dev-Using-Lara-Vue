@@ -38,4 +38,48 @@ is another task of constructor.
  on until the condition false.
 
 ## "for" loop is working anti clock wise behavior:
-    In the above execution of
+    In the above execution of "for" loop initialization($this->i = 10;) this part will execute only one time. Then condition($this->i > 15;) part
+    will execute. If condition true than, it will enter the loop block then increment/decrement part will execute. Then condition, then loop block
+    then increment/decrement and so on. so it is circling like anti clock wise.
+
+## Repeated statement "while" example:
+        $this->i = 100;
+        while($this->i < 105){
+             echo $this->i . " ";
+             $this->i++;
+        }
+
+        *** while loop is same as for loop.
+
+        1. Initialization = $this->i = 100;
+        2. condition = while($this->i < 105)
+        3. Increment/Decrement: $this->i++;
+
+        *** If the condition false, it will not execute the statements inside the loop.
+
+
+## Ideal practice of writing HTML tag: The tags that don't not have any closing tag, we should always use a slash(/) at that tag.
+        Example: <br/>, <hr/>
+
+## Characteristics of "do while": do while loop always run at least one time.
+
+## Difference between "for, while" and "do while": for and while loop first check the condition then execute the statements but do while first time
+without checking the condition at least one time execute the statements. After executing the statements for the first time then "do while" loop check
+the condition. If condition true "do while" loop will continue iterating and if false "do while" loop will break the iteration.
+
+
+## 10. Difference between "for, while, do while" and "foreach": "for, while, do while" is work with single valued property but "foreach" loop is work
+with multi valued property like array.
+
+## Array: Array is collection of data.
+
+## We use 4 types of data in php: integer, string, double, boolean
+
+## Warning: Array to string conversion: If we directly echo an array this type of error will show. We have to consider array index to echo it. Without
+ declaring an associative array, it will start from index 0.
+
+## Warning: Undefined array key: It means array key is undefined.
+
+##  Warning: Undefined property: It means class property key is undefined.
+
+## How to decrease memory loss in an array:We should store big integer like phone number in string form inside an array. It will decrease memory loss.
