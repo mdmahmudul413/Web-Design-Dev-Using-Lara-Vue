@@ -1,0 +1,52 @@
+## Global Array(Built in) of PHP: For various reason, we have to pass data globally. For passing data globally, we can not use user created array. Because these user
+ created array's access is limited. In this case we have to use global array. In PHP the global arrays are _POST, _GET, _SERVER, _SESSION, _COOKIE, _REQUEST, _ENV,
+ _FILES.
+
+## The use of global array $_GET: To tranfer data we use $_GET.
+
+## Built in function "header()" and it's meaning: "header()" function is used To load another file from a specific file. This function accept a string.
+example:
+        header("Location: action.php?page=home");
+
+        In this statement,
+            action.php   =    a php file
+            ?            =    $_GET
+            page=home    =    $_GET['page'] = 'home'
+
+## Functionality of isset(): This is a built in function. It checks a variable has value or not.
+
+## The use case of PHP and HTML: To create a content, we use php and to show that content to the browser, we use html.
+
+## What is HTML: It's a tag based markup language. HTMl has 120± tags.
+
+## Details about HTML default structure:
+
+            <!doctype html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                <title>Document</title>
+            </head>
+            <body>
+                <h1>This is a Heading.<h1/>
+            </body>
+            </html>
+
+            Meaning of each tag:
+            1. <!doctype html>: This determine that which version of html is using.
+            2. <html><html/>: This is mother tag of html.
+            3. Total two parts in the html file. They are <head><head/> and <body><body/>
+            4. In the <head> section the total things are supporting documents.
+            5. <meta charset="UTF-8">: It mean's all language is supported.
+            6. <meta name="viewport" ....>: To make it responsive.
+            7. <meta http-equiv="X-UA-Compatible" ...>: This is responsible for browser issue.
+            8. <title>Document</title>: It show the title of a page
+            9.<body></body>: what we write inside body will appear in the browser.
+
+
+## <link rel="stylesheet" href="assets/css/style.css"/>:
+        rel = relation
+        href = hyper reference
+
