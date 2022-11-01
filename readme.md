@@ -1,9 +1,9 @@
-**Class 1:**
+## **Class 1:**
 
     1. Basic php OOP structure.
     2. A php OOP project of showing "Hello World" output in the browser.
 
-**Class 2:**
+## **Class 2:**
 
     1. Changing the port of Apache server.
     2. How to rename a folder.
@@ -18,7 +18,7 @@
     11. Suggestion from IDE(phpstrom)
     12. PHP opening(<?php) and closing(?>) 
 
-**Class 3:**
+## **Class 3:**
 
     1. Again PHP OOP file structure
     2. include, include_once, require, require_once
@@ -37,11 +37,11 @@
     14. &nbsp; (To take more than one space)
     15. Operator
 
-**Class 4:**
+## **Class 4:**
 
     1. Class one to class three was repeated for the new comers.
     
-**Class 5:**
+## **Class 5:**
 
     1. Fatal error: Uncaught ArgumentCountError
     2. Declaring variable inside function is a bad practice
@@ -63,7 +63,7 @@
     18. Example of conditional statement (if, if else, if else if, switch)
     19. Behaviour of conditional statement "switch"
     
-**Class 6:**
+## **Class 6:**
 
     1. Works of a constructor
     2. Repeated Statement(for, while, do while, foreach)
@@ -85,7 +85,7 @@
     18. Array Object Sign(=>)
     19. The Real Practice of Array(Vary Important)
     
-**class 7**
+## **class 7**
 
     1. Again Array Example
     2. Built in function "print_r()", "var_dump()"
@@ -98,5 +98,18 @@
     9. What is HTML
     10. Details about HTML default structure 
     11. <link rel="stylesheet" href="style.css"/> Meaning
+
+## **Class-8**
+
+    1. Making a blog array and printing it to a view
+    2. Calling a class from another class
+    3. Different way of declaring public property
+    4. Common contants of any site
+    5. "../" Meaning
+    6. Keyword "include" meaning
+    7. What is CSS?
+    8. Basic syntex of CSS
+    9. Three types of CSS selectors
+    10. Block level and Inline Elements
 
 
