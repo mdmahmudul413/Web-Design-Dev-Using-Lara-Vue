@@ -1,0 +1,35 @@
+## The problem of adding additional height & width to the html elements: When we add height and width to html elements,
+    it does not get only the height & width. It also get same valued border and padding.
+
+    suppose,
+            .box-one{
+                height: 300px;
+            }
+
+    So the box one class does not only get 300px heght. it also get 300px border and 300px padding. This is the
+    limitation of html
+
+    But first time the elements do not show the additional border and padding. At then ext time when we use additional
+    border and padding, at that time the previous border and padding will add to the additional border or padding.
+    That's why after adding border or padding, the elements grow bigger and holds the excessive width and break the desired layout.
+
+## Importance of CSS property "box-sizing: border-box;": To eliminate the above problem of breaking down the desired layout,
+   we have to use this CSS property "box-sizing: border-box;". This CSS property will remove the auto added
+    border and padding.
+
+## Discuss some real life scenario of projects: When the clients request us to create a website of their business then,
+  our first concern as a web developer, should be the design outline or UI of the desired website. So that the first concern,
+  make the layout structure. After successfully create the layout then the second concern is to create the contents of the
+  website. Contents are like menu, sidebar, articles, paragraph, etc.
+
+## Disscuss about CSS property Grid, Flex: There are different types of CSS property to create the initial layout structure of
+   a website name Grid, Flex. Both are popular.
+
+## Grid system divides the screen full width equally 12 times: Grid system maintain some rules. It says us to assume
+   the screen full width 100% and divide it equally 12 times. So each portion will grab 8.33% of width. Now we will maintain
+   the portions to attach the elements to the width. Suppose, manu will holds total 12 portions. So that it will grab 100%
+   of width. Otherwise sidebar will hold 3 portions, so that it will grab 3 X 8.33 = 25% of total width.
+
+## CSS Rules for adding common property to the elements [class*='col-']{...},
+
+    1. [class*='col-']
