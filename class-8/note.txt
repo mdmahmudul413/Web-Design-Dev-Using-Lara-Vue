@@ -1,0 +1,24 @@
+## Different way of declaring public property:
+==>    public $message
+       public $blog;
+       or,
+       public $message, $blog;
+
+## Common constants of any site: Heading(<h1></h1>, <h2></h2>....), Paragraph(<p></p>), image(<img src="" alt="">).
+
+## "../" Meaning: "../" means one step upper directory.
+
+## What is CSS: CSS is a class based stylesheet language.
+
+## Basic syntex of CSS:
+    selector{
+        property: value;
+    }
+
+## Three types of CSS selectors:
+    1. HTML tags
+    2. User defined name
+    3. Special syntex
+
+## Block level and Inline Elements: Block level elements grab the full row. But inline elements doesn't grab
+   the full row. It grabs the only the area which consume it's contents.

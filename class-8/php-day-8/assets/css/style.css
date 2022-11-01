@@ -1,0 +1,12 @@
+.box-one{
+    float: left;
+    height: auto;
+    width: 539px;
+    background-color: red;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.w-100{
+    width: 100%;
+}

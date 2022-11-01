@@ -36,7 +36,7 @@ example:
 
             Meaning of each tag:
             1. <!doctype html>: This determine that which version of html is using.
-            2. <html><html/>: This is mother tag of html.
+            2. <html><html/>: This is the mother tag of html.
             3. Total two parts in the html file. They are <head><head/> and <body><body/>
             4. In the <head> section the total things are supporting documents.
             5. <meta charset="UTF-8">: It mean's all language is supported.
