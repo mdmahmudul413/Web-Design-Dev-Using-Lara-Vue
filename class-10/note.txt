@@ -1,0 +1,101 @@
+## If we mistakenly give wrong value to width of the Content Area: If we mistakenly give wrong width value to html element. It may
+   be break the layout. To eliminate this problem we have to wrap each and every element inside a row. This is a global industry certified
+   technic. If we follow this rule, globally none can underestimate us. This is the most important rule of writing any kind of code.
+
+   Example:
+
+        <div class="row">
+            <div class="col-2 h-200">LOGO</div>
+            <div class="col-10 h-200">BANNER</div>
+        </div>
+
+
+## Pseudo Element & Pseudo Class: Pseudo Elements & Pseudo Classes will not work all the time. These will work in while
+   occur a decent scenario.  Example: :before{}, :after{}, :hover{}, etc.
+
+## Pseudo class, elements writing style in CSS version 2: In CSS version 2 pseudo classes are written with a single colon ":" and
+   pseudo elements are written with double colon "::".
+
+## Pseudo class, elements writing style in CSS version 3: In CSS version 3 pseudo class and elements both are written with single colon ":".
+
+## Difference between pseudo class and pseudo element: If we want to change full property of a html element then we use pseudo
+   class. But when we want partial change to a html element then we use pseudo elements.
+
+   Example:
+
+   pseudo class,
+        .test:hover{
+            color: white;
+            background-color: red;
+        }
+
+   pseudo element,
+        .test:first-letter{
+            color: white;
+            background-color: red;
+        }
+
+## The work of pseudo property ":after": When we use :after pseudo property to a html element, It will add the properties which are
+   written inside ":after" will apply after that particular html element.
+
+## Standard naming: Every name has a standard form. Whatever the name is, It can be a class name, element name, etc. example: container, row, col, etc
+
+## We should not wrap everything inside a container class: Previously we wrap everything inside a single container.But now we should
+   not wrap everything inside a container class because every section has different different css property like background color, etc.
+   The sequence is immediate parent of column will row. Then immediate parent of row will container class.
+    Example:
+        container > row > column.
+   Note: Container will give only the margin of our page.
+
+## Every html elements has some default margin and padding: For this reason we should add globally margin, padding zero.
+
+    example:
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+## Use case of class Column, Row, Container:
+    Column: Column class specifies the element size. It means what the size the element should be. Should it 12 like menu or 2/3 like sidebar.
+    Row: Row class wraps the column. It will help not to enter other element to particular element.
+    Container: Container class gives a row a specific margin.
+
+## Present standard of making a page SEO friendly(wrap the sections inside semantic tag): Now we are using html 5.
+   Previous version of html, we don't think about it. But now we always think about the SEO of a web page. That's
+   why we always wrap every sections inside a specific semantic element. This will make every page SEO friendly.
+   Semantic elements are comes in html 5.
+
+    Example:
+        Header = <header>...</header>
+        Nabar = <nav>...</nav>
+        Sidebar = <aside>...</aside>
+        Main Content = <section>...</section>
+        Footer = <footer>...</footer>
+
+## We always give background color in the semantic element: To get the background color in the full width(content+margin),
+   we should apply background color in the semantic elements.
+
+## Importance of writing Media Query code: Media query is used to make web page responsive. A web developer have to
+   write soo much media query. So media query is very important topic for a web developer.
+
+## The rules of responsive in the small device: The responsive rules of small devices is to make all elements full width(100%).
+
+## max-width, min-width, media query syntax:
+
+    media query syntax,
+
+        1. @media screen and (max-width: 800px){
+
+           }
+
+        2. @media screen and (min-width: 800px){
+
+           }
+
+    a. (max-width: 800px): It means @media query css property will apply at maximum width till 800px.
+    b. (min-width: 800px): It means @media query css property will apply at minimum width 800px and upper value.
+
+
+
