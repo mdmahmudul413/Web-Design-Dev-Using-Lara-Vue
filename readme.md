@@ -145,4 +145,27 @@
     15. max-width, min-width, media query syntax
     16. media query example
 
+## **Class 11**
+
+    1. Difference between header and include
+    2. How to include bootstrap inside our project
+    3. We should have a clear concept about menu bar
+    4. Making a navbar using bootstrap 5.2
+    5. Making dropdown menu using bootstrap 5.2
+    6. Bootstrap Spacing(xs, sm, md, lg, xl, xxl)
+    7. Making carousel slider using bootstrap 5.2
+    8. Standard timing for carousel slider is 1800ms-2200ms
+
+## **Class 12**
+
+    1. Continue from the previous class(class 11)
+    2. Creating card using Bootsrap 5.2
+    3. Creating category class
+    4. Creating product class
+    5. Categories and Products are dynamically showing in the home page
+    6. Creating detail.php page
+    7. The common Bootstrap class of <section> is "py-5"
+    8. href="action.php?page=detail&&id=5" meaning
+    
+
 

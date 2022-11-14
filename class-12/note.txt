@@ -1,0 +1,12 @@
+## href="action.php?page=detail&&id=5" meaning:
+    In the $_GET array:
+
+        Array
+        (
+            [page] => detail
+            [id] => 5
+        )
+
+        Note,
+            1. ?  =  $_GET[] array
+            2. && =  separator

@@ -1,0 +1,52 @@
+## Difference between header and include: Almost both are same. header redirect the compiler to another place but include
+   load another file inside a specific file or location.
+
+## How to include bootstrap inside our project:
+
+        1. Download the zip file from getbootstrap.com
+        2. Extract it
+        3. copy css and js file into our project assets directory
+        4. link bootstrap.css file from css folder inside our page
+        5. add bootstrap.bundle.js file from js folder inside script
+           tag before the closing body tag inside our page.
+
+## We should have a clear concept about menu: After creating a project we have to update navbar multiple times. So that,
+   we should have a clear idea or concept about our menu or navbar.
+
+## Making a navbar using bootstrap 5.2:
+
+        Bootstrap classes in navbar,
+
+            1. navbar = small padding;
+            2. navbar-nav = disappear bullets + eliminate padding
+            3. nav-link = disappear text decoration + padding + color
+            4. navbar-expand = make manu element Straight
+            5. navbar-dark = manu text color light
+            6. bg-dark = backgroud dark
+            7. me-auto/mx-auto/ms-auto: margin auto from right/  left, right/  left
+
+## Making dropdown menu using bootstrap 5.2: Bootstrap use dropdown.js jquery plugin to create dropdown menu. The js codes are written
+   in bootstrap.bundle.js and we just add an attribute 'data-bs-toggle="dropdown"' to use those javascript codes.
+
+   Example:
+                    <li class="dropdown">
+                        <a href="" class="nav-link" data-bs-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="" class="dropdown-item">Service One</a></li>
+                            <li><a href="" class="dropdown-item">Service Two</a></li>
+                            <li><a href="" class="dropdown-item">Service Three</a></li>
+                        </ul>
+                    </li>
+
+
+## Bootstrap Spacing(xs, sm, md, lg, xl, xxl):  Bootstrap 5 has a wide range of responsive margin and padding utility classes.
+   They work for all breakpoints: xs (<=576px), sm (>=576px), md (>=768px), lg (>=992px), xl (>=1200px) or xxl (>=1400px))
+##
+##
+##
+##
+##
+##
+##
+##
+##
