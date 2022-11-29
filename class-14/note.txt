@@ -1,0 +1,5 @@
+## Tag name attribute standard:
+
+    <input type="text" class="form-control" id="last_number" name="last_number"/>
+
+    Note: We should always use underscore "_" in the name attribute.
