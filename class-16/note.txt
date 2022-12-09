@@ -1,0 +1,102 @@
+## Security issues: We should not give access to all class properties and methods from other files because of
+   the security purpose. To secure the class properties and methods, we use encapsulation process in our class.
+
+## Encapsulation: when we declare the class methods and properties public then we can easily access all the properties
+   and methods from other files. But if we add private or protected access modifiers to those properties and methods
+   then, we can not access all the properties and methods. In this way, we can secure our classes. This process is
+   called Encapsulation.
+
+## Two ways of inheritance:
+
+        a. Importing the class
+
+            Example:
+
+                <?php
+                    namespace App\classes;
+
+                    use App\classes\User;
+
+                    class Home
+                    {
+
+                    }
+
+            Note: In this way, we have to create class object.
+
+        b. Extend the parent class
+
+            Example:
+
+                <?php
+                    namespace App\classes;
+                    class Home Extends User
+                    {
+
+                    }
+
+            Note:
+
+                1.In this way, Home is a child class and User is a parent class. And now we don't need to import the class and
+                  also no need to make class object.
+
+                2. In this way, we can access the public and protected properties and methods of parent class but private properties
+                    and methods can not be accessed by child.
+
+## Polymorphism: When we want to use other class public and protected properties and methods then, we need polymorphism.
+   In this way, we can also modify them.
+
+## Similarity between inheritance and polymorphism: Inheritance and polymorphism are quite similar. The difference is, by the
+   use of inheritance process we can use the protected and public properties and method of inherited class. On the other hand
+    by the use of polymorphism, we can also use them and moreover we can modify them.
+
+## Interface: We have to use interface inside class. We can not create object of interface inside view file. We can not declare
+   property inside interface. We can just declare method inside interface but we can not not define those methods inside interface
+   file. To use interface to another class, we have to use "implements" keyword then, inside the class, we have to define those methods which are
+   declared inside interface.
+
+    Example:
+
+        1. Interface: ExampleOne.php
+
+            <?php
+                namespace App\classes;
+                interface ExampleOne
+                {
+                    public function one();
+                    public function two();
+                    public function three();
+                }
+
+        2. class: Home.php
+
+            <?php
+                class Home Extends User implements  ExampleOne
+                {
+                    public function __construct()
+                    {
+                        ...
+                    }
+
+                    public function one()
+                    {
+                        // TODO: Implement one() method.
+                    }
+
+                    public function two()
+                    {
+                        // TODO: Implement two() method.
+                    }
+
+                    public function three()
+                    {
+                        // TODO: Implement three() method.
+                    }
+                }
+
+            Note: Interface make functions more secure. A single class can implements multiple interfaces.
+
+## Abstract Class: We declare a class abstract for secure the class. We can write anything in the abstract class like a normal class.
+   But we can not create object of abstract class from view. We have use abstract class inside other class like interface. We have to extend
+   it from other class.
+

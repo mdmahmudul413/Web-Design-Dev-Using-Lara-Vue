@@ -1,0 +1,3 @@
+## Switch is more appropriate for implementing calculator logic: For implementing calculator logic switch is more appropriate
+   than if else because if else needs to check the condition which consume more time. But switch does not need to check
+   condition and it's faster then if else.

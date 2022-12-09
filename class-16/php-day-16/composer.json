@@ -1,0 +1,14 @@
+{
+  "name": "php-day-16/php-day-16",
+  "type": "project",
+  "description": "A simple php project",
+  "keywords": [],
+  "licence": "",
+  "require": {},
+  "require-dev": {},
+  "autoload": {
+    "psr-4": {
+      "App\\":"app//"
+    }
+  }
+}
