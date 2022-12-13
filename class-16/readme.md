@@ -10,5 +10,6 @@
     8. Similarity between inheritance and polymophism
     7. Interface
     8. Abstract Class
+    9. We can create resource like interface inside abstract class
     
     

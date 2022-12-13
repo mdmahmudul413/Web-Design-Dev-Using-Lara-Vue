@@ -1,0 +1,119 @@
+## Key information of abstract class, interface, etc:
+
+    1. We can not directly create object of abstract class and interface.
+    2. We use abstract class and interface in other class.
+    3. To import an interface inside a class, we implements it in that class.
+    4. To import an abstract class inside a class, we have to extends it.
+    5. A class can extends only one class.
+    6. Child class can only access public and protected properties, methods of
+       parent class.
+    7. We can only access public property, methods of a class from view.
+
+## Static, non static property and Method:
+
+    Example:
+
+        1. Static resource
+
+            public static $contact = '34567';
+
+            public static function edit(){
+                return "in edit";
+            }
+
+        1. Non static resource
+
+            public $contact = '34567';
+
+            public function edit(){
+                return "in edit";
+            }
+
+## Calling Static property, Methods from view: We don't need to create object for calling static property, methods from view.
+   We can it like bellow. But if we create class object and use own class object "$this" to grab static property, method from
+   view, it will also work but this is not the correct way of using static resource from view.
+
+        Example:
+            Home::edit();
+            echo Home::$contact;
+
+## Trait: We use trait inside class.
+
+
+## We should not create constructor inside abstract class, interface, trait etc because we can not create object of these things.
+
+
+## MVC Theory(Model View Controller): MVC is the international pattern/standard of writing code.
+
+    M = Model(Connected to database)
+    V = View(The representation)
+    C = Controller(Which loads view)
+
+    Note: Model and Controller are in general two different class. The difference is, controller class is work with
+    view using logic but model class is work with data. Model will always connect with database. At first controller
+     gives user a view. Then view will request controller to give data and controller will request model to give
+     that data from database. Finally Model will request database directly for data and sequentially database gives
+      data to model, model to controller and finally controller to view. When we write code in this sequence, this
+      will called MVC pattern.
+
+
+## Route: It decides when and which controller will start to working.
+
+
+## The work flow of first load a laravel website: First will run index.php. Then it will redirect it to route file and route will redirect it to the controller. Then controller will load the view.
+
+
+## Laravel Installation prerequisite:
+
+    1. Xampp(apache)
+    2. Composer
+    3. Laravel Installer(This is a package like composer)
+
+
+## command: php artisan serve(To create a virtual server to run laravel project): When we make this command, Laravel
+   project will build and then run a specific port.
+
+
+## The work of predefine function define(): This function declare global variable.
+
+
+
+## Basic Understanding of the lines of code written in public/index.php:
+
+    1. Predefined function:  define('LARAVEL_START', microtime(true));
+    2. Importing composer: require __DIR__.'/../vendor/autoload.php';
+    3. Requiring boot file:  $app = require_once __DIR__.'/../bootstrap/app.php';
+        Note: This bootstrap is not css framework bootstrap. This is like a configuration file. Suppose, when we boot our PC, some instruction
+        in the rom which helps to boot up the pc. This bootstrap is kind of that type of instructions which helps laravel to start up.
+        Basically this is a configuration file.
+
+    4. predefine function exit() immediately stop the compiler
+
+## routes folder: There are four files. They are api.php, channels.php, console.php, web.php. For general request we use web.php.
+
+
+
+## Understanding the web.php file:
+
+    1. class: use Illuminate\Support\Facades\Route;
+    2.  Route::get('/', function () {
+            return view('welcome');
+        });
+
+       This is a static function of Route class.
+## Requiring vendor/autoload.php is not needed in all view file in laravel: In public/index.php, there vendor/autoload.php
+   file is already imported. so that we don't need to require it again.
+
+
+## Built in function route() and url(): Both are closely same.
+
+    1. If use route()
+        <a href="{{ route('contact') }}">contact</a>
+
+        Note: string will be same as defined the route name.
+
+    1. If use url()
+        <a href="{{ url('/contact') }}">contact</a>
+
+        Note: string will be same as defined the url name.
+        Note: route() is recommended

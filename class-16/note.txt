@@ -96,7 +96,18 @@
 
             Note: Interface make functions more secure. A single class can implements multiple interfaces.
 
-## Abstract Class: We declare a class abstract for secure the class. We can write anything in the abstract class like a normal class.
-   But we can not create object of abstract class from view. We have use abstract class inside other class like interface. We have to extend
+## Abstract Class: We can declare a class abstract for secure the class. We can write anything in the abstract class like a normal class.
+   But we can not create object of abstract class from view. We have to use abstract class inside other class like interface. We have to extend
    it from other class.
+
+
+## We can create resource like interface inside abstract class:
+
+    Example:
+
+        abstract class Teacher
+        {
+            public abstract function hello();
+        }
+
 

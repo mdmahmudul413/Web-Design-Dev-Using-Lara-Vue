@@ -28,6 +28,11 @@ class Home extends Teacher implements  ExampleOne, ExampleTwo
         $this->messageThree = "Hello Laravel";
     }
 
+    public function hello()
+    {
+        // TODO: Implement hello() method.
+    }
+
     public function funcOne()
     {
         // TODO: Implement funcOne() method.
@@ -87,4 +92,5 @@ class Home extends Teacher implements  ExampleOne, ExampleTwo
     protected function basis(){
         echo $this->messageThree;
     }
+
 }
