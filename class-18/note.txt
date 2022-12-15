@@ -5,11 +5,3 @@
     The word controller will include inside the controller name.
 
 ## return view('home.index'); meaning: This line will return index file at home directory inside view folder.
-##
-##
-##
-##
-##
-##
-##
-##
