@@ -1,0 +1,131 @@
+## **Class 22**
+
+    1. Creating a project about blog data insert, update, delete inside database(continued from class 21)
+    
+    2. We can post two types of data from a form.
+    
+        a. Raw Data
+        b. File Data
+        
+        
+    3. Raw Data: To read some data, we don't need any additional program, these data are called raw data.
+        
+        Example: string, mobile number, address, etc
+    
+    
+    4. File Data: To read some data, we need any kind of additional program, these data are called file data.
+    
+        Example: image, videos, pdf files, etc
+            
+            
+    5. When we want to send file data from a form, then we have to add bellow line inside form,
+        
+        enctype="multipart/form-data"
+        
+        
+    6. File data mainly is an object which has a size, name etc.
+    
+    7. After posting a form, raw data will insert into global array _POST() and file data will insert into global array _FILE() 
+    
+    8. Before moving image from some location to our project, it locate a temporary file location for a while.
+    
+    9. Both returns the same value which is mainly image object.
+    
+        a. return $request->file('image');
+        b. return $request->image;
+        
+        Note: Both will return the temporary image file location. And its an object and we apply different functions using this image object.
+        
+        
+    10. file() method of Request class is coming from symphony framework.
+    
+    11. Laravel Naming Convension:
+    
+        When model name is singular and table name plural, they will autometically conected to each other.
+        
+    
+    12. We can break the naming convension rule by adding a line inside model. 
+    
+        Line is,
+            
+            protected $table = 'name-of-the-table';
+            
+            
+    13. We should make function size always smaller
+    
+    
+    14. Some methods for filltering data
+    
+        a. Get data in ascending order according to id
+        
+            public function manage(){
+                    $this->blogs = Blog::all();
+                    return Blog::orderBy('id', 'asc')->get();
+            }
+    
+    
+        b. Get data in descending order according to id
+        
+            public function manage(){
+                    $this->blogs = Blog::all();
+                    return Blog::orderBy('id', 'desc')->get();
+            }
+    
+    
+        c. Get the first row in descending order according to id
+        
+            public function manage(){
+                    $this->blogs = Blog::all();
+                    return Blog::orderBy('id', 'desc')->first();
+            }
+    
+    
+        d. Get the first row in descending order according to id
+        
+            public function manage(){
+                    $this->blogs = Blog::all();
+                    return Blog::find(16);
+            }
+            
+          Note: When we need multiple rows, we have to add get() method.
+    
+    
+        e. Get the last two rows in descending order according to id
+        
+            public function manage(){
+                    $this->blogs = Blog::all();
+                    return Blog::orderBy('id', 'desc')->take(2)->get();
+                }
+    
+    
+        f. Skip a row and then, get the last two rows in descending order according to id
+        
+            public function manage(){
+                    $this->blogs = Blog::all();
+                    return Blog::orderBy('id', 'desc')->skip(1)->take(2)->get();
+            }
+    
+    
+        g. Get the titles of the rows in descending order according to id
+        
+            public function manage(){
+                    $this->blogs = Blog::all();
+                    return Blog::orderBy('id', 'desc')->get(['title']);
+            }
+    
+    
+        h. We can add multiple columns
+        
+            public function manage(){
+                    $this->blogs = Blog::all();
+                    return Blog::orderBy('id', 'desc')->get(['title', 'author']);
+            }
+            
+    
+    15. We should not print the id number inside a table. We should print the serial number like this "{{$loop->iteration}}". $loop is a built in object. 
+        It only works inside loop.
+            
+          
+        
+    
+    

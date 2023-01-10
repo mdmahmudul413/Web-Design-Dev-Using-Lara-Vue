@@ -327,6 +327,8 @@
     48. Executing migration file command: php artisan migrate
     49. config/database.php is database configurational file
     50. Chrome Extension json viwer installation
+
+
     
     
     
