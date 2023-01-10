@@ -328,7 +328,296 @@
     49. config/database.php is database configurational file
     50. Chrome Extension json viwer installation
 
+## **Class 21**
 
+    1. In laravel we always make database table with migration
+    
+    2. In raw PHP, for working with database, there are three classes:
+    
+        a. mysql(Deprecated)
+        b. mysqli
+        c. PDO
+    
+    3. In laravel, for working with database, there are two classes:
+        
+        a. Eloquent ORM
+        b. Query Builder
+        
+    4. Query Builder direct interact with database, it does not need Model
+    
+    5. Query Builder class(library) is created by Laravel
+    
+    6. Query Builder is a very powerfull library but, after using query builder the pattern will not in MVC form. Vary complex queries can be 
+       written by query builder.
+       
+    7. ORM is a international standard library, this is not created by laravel. Those who work with C# or Java, have to work with ORM. They 
+       don't have any other option.
+       
+    8. The first policy of ORM process is, every table must has a Model
+    
+    9. We always try to work with ORM, but if we need, we can move to query builder.
+    
+    10. migration table in the database is created by laravel. This table has the information of the migration files. The information is about 
+        how many times the migration files have modified, etc 
+        
+    11. Request Class take the data from $_POST array and create a json object
+    
+    12. We have to use static property inside static method
+    
+    13. If we update any kind column information in our table, we should always do this through migration file.
+    
+    14. save() method writes data in the database. This function comes from parent class Model. We mainly called ORM of this Model class.
+    
+    15. In laravel, Session() is a global object
+    
+    16. Model property, methods should be static
+    
+    17. We should not print id in the view, we will print global object $loop->iteration for serial number
+
+## **Class 22**
+
+    1. Creating a project about blog data insert, update, delete inside database(continued from class 21)
+    
+    2. We can post two types of data from a form.
+    
+        a. Raw Data
+        b. File Data
+        
+        
+    3. Raw Data: To read some data, we don't need any additional program, these data are called raw data.
+        
+        Example: string, mobile number, address, etc
+    
+    
+    4. File Data: To read some data, we need any kind of additional program, these data are called file data.
+    
+        Example: image, videos, pdf files, etc
+            
+            
+    5. When we want to send file data from a form, then we have to add bellow line inside form,
+        
+        enctype="multipart/form-data"
+        
+        
+    6. File data mainly is an object which has a size, name etc.
+    
+    7. After posting a form, raw data will insert into global array _POST() and file data will insert into global array _FILE() 
+    
+    8. Before moving image from some location to our project, it locate a temporary file location for a while.
+    
+    9. Both returns the same value which is mainly image object.
+    
+        a. return $request->file('image');
+        b. return $request->image;
+        
+        Note: Both will return the temporary image file location. And its an object and we apply different functions using this image object.
+        
+        
+    10. file() method of Request class is coming from symphony framework.
+    
+    11. Laravel Naming Convension:
+    
+        When model name is singular and table name plural, they will autometically conected to each other.
+        
+    
+    12. We can break the naming convension rule by adding a line inside model. 
+    
+        Line is,
+            
+            protected $table = 'name-of-the-table';
+            
+            
+    13. We should make function size always smaller
+    
+    
+    14. Some methods for filltering data
+    
+        a. Get data in ascending order according to id
+        
+            public function manage(){
+                    $this->blogs = Blog::all();
+                    return Blog::orderBy('id', 'asc')->get();
+            }
+    
+    
+        b. Get data in descending order according to id
+        
+            public function manage(){
+                    $this->blogs = Blog::all();
+                    return Blog::orderBy('id', 'desc')->get();
+            }
+    
+    
+        c. Get the first row in descending order according to id
+        
+            public function manage(){
+                    $this->blogs = Blog::all();
+                    return Blog::orderBy('id', 'desc')->first();
+            }
+    
+    
+        d. Get the first row in descending order according to id
+        
+            public function manage(){
+                    $this->blogs = Blog::all();
+                    return Blog::find(16);
+            }
+            
+          Note: When we need multiple rows, we have to add get() method.
+    
+    
+        e. Get the last two rows in descending order according to id
+        
+            public function manage(){
+                    $this->blogs = Blog::all();
+                    return Blog::orderBy('id', 'desc')->take(2)->get();
+                }
+    
+    
+        f. Skip a row and then, get the last two rows in descending order according to id
+        
+            public function manage(){
+                    $this->blogs = Blog::all();
+                    return Blog::orderBy('id', 'desc')->skip(1)->take(2)->get();
+            }
+    
+    
+        g. Get the titles of the rows in descending order according to id
+        
+            public function manage(){
+                    $this->blogs = Blog::all();
+                    return Blog::orderBy('id', 'desc')->get(['title']);
+            }
+    
+    
+        h. We can add multiple columns
+        
+            public function manage(){
+                    $this->blogs = Blog::all();
+                    return Blog::orderBy('id', 'desc')->get(['title', 'author']);
+            }
+            
+    
+    15. We should not print the id number inside a table. We should print the serial number like this "{{$loop->iteration}}". $loop is a built in object. 
+        It only works inside loop.
+            
+## **Class 23 (Mastering)**
+
+    1. Officially start to build ecommerce project
+    
+    2. Basic mastering has been covered
+    
+    3. There is two parts of an ecommerce website
+    
+        a. Frontend
+        b. Admin Panel
+        
+    4. To download paid template free, we need a software name "Httrack"
+    
+    5. The first controller name of a project should be renamed based on the project name
+
+## **Class 24 (Admin Panel Part-1)**
+
+    1. To create admin panel authentication, we will use a package name Jetstream. It's a recommanded package from laravel 
+       for creating admin panel authentication. There are another authentication package is Laravel Breeze.
+    
+    2. jetstream.laravel.com is the official website of jetstream. It's mainly a website of a package.
+    
+    3. What is package?
+        
+        A package means a plugin. Inside a plugin, there can be different types of files. They are controllers/models, view, 
+        css files. It means design, view, data, logic, etc all files can be included inside package.
+        
+    4. Installation of Jetstream
+        
+        step 1:
+        
+            command 1: composer require laravel/jetstream
+            
+            command 2: php artisan jetstream:install livewire
+            
+          Note: By this command 1, it will activate the logics of jetstream inside our project. But to get the supporting 
+                view we have to give command 2.
+        
+        step 2:
+            
+            Connect project with a database and execute the created session migration file. Then, reload the project.
+            
+            
+    5. Then hit the url 127.0.0.1:8000/login and 127.0.0.1:8000/register, if the login and register pages appear then it's ok otherwise no need to worry. 
+       There is other process to register user.
+    
+    
+    6. If the jetstream defualt login and register pages appear then, simply register an user.
+    
+    
+    7. when we hit the url 127.0.0.1:8000/register, it will load resources/views/auth/register.blade.php and this file extends 
+       resources/views/layouts/guest.blade.php file
+       
+    
+    8. Actually we don't use the default jetstream login and register pages. We use our own login and register pages which is provided inside our admin template.
+    
+    
+    9. How to register user without using jetstream default register page.
+    
+        step 1: 
+        
+            There is a file "database/factories/UserFactory.php" and inside this file there is a function name definition(), where fake user creation data
+            are defined. Actually this file is given by default to create fake user inside database users table. If further we need to insert fake data to 
+            another table inside database, we have to manually create factory file.
+            
+        step 2:
+        
+            There is a file "database/seeders/DatabaseSeeder.php" and inside this file there is a function name run(), where some lines of code are 
+            commented. Actually these lines means how many fake row will insert to the database according to the definition of factory file.
+            
+          Note: To insert fake user into users table, laravel by default give us "UserFactory.php" file which helps to User model to insert fake data 
+          to database. And the structure is defined inside "UserFactory.php" file. Finally to execute the "UserFactory.php" file, we have to 
+          run "DatabaseSeeder.php" file. 
+            
+        step 3:
+        
+            Uncomment "\App\Models\User::factory(10)->create();"  this line.
+            
+          Note: factory(10), this 10 means 10 rows.
+          
+        
+        step 4: 
+        
+            command: php artisan db:seed
+            
+          Note: Now 10 rows will create inside users table.
+          
+        
+        step 5:
+        
+            Now again comment "\App\Models\User::factory(10)->create();"  this line.
+            
+          Note: If we don't comment this line again then, when we again make "php artisan db:seed" for other table data insertion, 10 more fake data
+                will insert into users table on each command.
+       
+                
+    10. Fake user password will "password"
+    
+    
+    11. The routes of jetstream login and register are not coming from web.php file. The routes of jetstream package are written in 
+        vendor/laravel/fortify/routes/route.php file
+        
+        
+    13. Now copy the admin template login page html markup and paste it to resource/views/auth/login.blade.php
+    
+    
+    14. **Importent: When we work with a template or theme, inside the css and javascript link, if there some kind of id is decleared, we will remove it. 
+        Some time it may occure some problem.
+        
+        
+    15. When we click on anchor tag <a href=""> Home </a>, it will active it's href="" attribute but if there is any attribute which name starts with "o" 
+        letter inside anchor tag then, the attribute will active before href="" attribute.
+
+    
+    16. Jetstream default logout route is written in post method.
+    
+    
     
     
     
