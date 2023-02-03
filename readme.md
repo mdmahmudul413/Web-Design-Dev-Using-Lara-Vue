@@ -616,6 +616,75 @@
 
     
     16. Jetstream default logout route is written in post method.
+
+
+## **Class 25 (Admin Panel Part-2)**
+
+    1. We customize Admin panel view in this part    
+    
+    2. We need Dashboard, Category, Sub Category, Brand, Unit, Product, Order, Customer, Company, User, etc module in the admin panel
+
+
+## **Class 26 (Category Table Crud)**
+
+    1. The idle practice is database table column name and input field name should be same.
+
+
+## **Class 27 (Sub Category, Brand, Unit Crud)**
+
+    1. The idle practice is database table column name and input field name should be same.
+
+
+## **Class 28 (Product Module Crud)**
+
+    1. Product Short Descriptions and long descriptions are firstly written in MS word.
+    
+    2. We have to use smart editor in the description field. 
+    
+
+## **Class 29 (Product update)**
+
+    1. Continued from last class.
+
+
+## **Class 30 (Frontend)**
+
+    1. We can share data centrally in laravel. 
+    
+    2. To share data centrally, we have to go app/Providers/appServiceProvider
+    
+    3. There is a function name boot(){} which is call when the project run.
+    
+    4. If we share data on this boot function then, it will be shared centrally.
+    
+
+## **Class 31 (Cart)**
+
+    1. We are using darryldecode package to create cart system
+
+
+## **Class 32 (Checkout)**
+
+    1. $table->text('order_timestamp') this field is for converting the order date into a number for reporting purpose.
+    
+
+## **Class 33 (Form Validation, Error Handling , Customer Authentication)**
+
+    1. "https://www.jqueryscript.net " is a very usefull website for jquery plugins and etc.
+    
+    2. There are many validation rules written in laravel.com
+
+
+## **Class 34 (Middleware, Order Manage, Invoice)**
+
+    1. There are 3 steps to use a middleware
+        
+        a. Middleware create and configure
+        b. Middleware register
+        c. Middleware use
+        
+    
+    
     
     
     
