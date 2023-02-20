@@ -1,4 +1,4 @@
-## **Class 38 (jQuery)**
+## **Class 37 (jQuery)**
     
     ======================================================================
         When we writing something in the input field then hover, click,
