@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basic JavaScript</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+</head>
+<body style="border: 3px solid">
+    <div class="container mt-3 mb-3">
+        <div class="row">
+            <div class="col-md-6">
+                <button class="btn btn-primary" id="button">Click to Create DIV</button>
+                <div class="mt-3" id="res"></div>
+            </div>
+            <div class="col-md-6" style="border-left: 3px solid">
+                <h5 class="mb-3">There are 3 types of elements</h5>
+                <h6>1. Opening Closing Tag Elements</h6>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;Example: h1 tag (Value comes from between opening & closing tag)</p>
+                <h6>2. Attribute Type Elements</h6>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;Example: image tag (Value comes from attribute)</p>
+                <h6>3. Input Type Elements</h6>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;Example: input tag (Value comes from value attribute)</p>
+                <h1 id="h1Element" style="display: inline;">This is Heading</h1>
+                <img id="imgElement" src="img/1.png" alt="" height="130" width="130">
+                <input id="inputElement" type="text" value="This is Input Field"/>
+
+                <div class="col-md-12 mt-3 mb-3 border-5 p-3 " style="border: 2px solid purple; border-radius: 5px;">
+                    <div class="row mb-2">
+                        <div class="col-md-2">
+                            <label class="col-form-label" for="firstName">First Name</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="firstName">
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-md-2">
+                            <label class="col-form-label" for="lastName">Last Name</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="lastName">
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-md-2">
+                            <label class="col-form-label" for="fullName">Full Name</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="fullName">
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-md-2">
+                            <label class="col-form-label"></label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="submit" class="btn btn-info w-100" id="submitBtn">
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-md-12 mt-3 mb-3 border-5 p-3 " style="border: 2px solid purple; border-radius: 5px;">
+                    <div class="row mb-2">
+                        <div class="col-md-2">
+                            <label class="col-form-label">Box Height</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="number" class="form-control" id="height">
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-md-2">
+                            <label class="col-form-label">Box Width</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="number" class="form-control" id="width">
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-md-2">
+                            <label class="col-form-label">Color</label>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="color" class="form-control" id="color">
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-md-2">
+                            <label class="col-form-label"></label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="submit" class="btn btn-info w-100" id="boxBtn">
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-md-12" id="result"></div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+<script>
+     // ==== JS Event and Listener ======
+     var button = document.getElementById('button');
+     var h1Element = document.getElementById('h1Element');
+     var imgElement = document.getElementById('imgElement');
+     var inputElement = document.getElementById('inputElement');
+     var firstName = document.getElementById('firstName');
+     var lastName = document.getElementById('lastName');
+     var fullName = document.getElementById('fullName');
+     var submitBtn = document.getElementById('submitBtn');
+
+
+     // EVENT LISTEN FOR CREATING DIV AND APPENDING THE DIV ON DOM
+     button.onclick = function () {
+        var divElement = document.createElement('div');
+        divElement.style.height = '100px';
+        divElement.style.width = '150px';
+        divElement.style.marginTop = '20px';
+        divElement.style.marginLeft = '20px';
+        divElement.style.backgroundColor = 'purple';
+        divElement.style.display = 'inline-block';
+        divElement.style.textAlign = 'center';
+        divElement.style.padding = '20px 0px 0px 0px';
+        divElement.style.color = 'white';
+        divElement.style.border = '2px solid black'
+        divElement.style.borderRadius = '5px'
+
+        divElement.innerHTML = "<h5>Hello World</h5>";
+
+        var btnElement = document.createElement('button');
+        btnElement.innerText = 'Detail';
+        btnElement.classList = 'btn btn-outline-warning btn-sm mt-1';
+        divElement.append(btnElement);
+
+        document.getElementById('res').append(divElement);
+     }
+
+     // EVENT LISTEN FOR CHANGING H1
+     h1Element.onclick = function () {
+        h1Element.innerHTML = "<h1 style='display: inline-block;'>Event Listened</h1>";
+     }
+     // EVENT LISTEN FOR CHANGING IMG
+     imgElement.onclick = function () {
+        alert('Image current attribute ' + '"' + imgElement.getAttribute('src')+ '"' + ' will change.');
+        imgElement.setAttribute('src', 'img/2.jpg');
+     }
+
+     // EVENT LISTEN FOR CHANGING INPUT FIELD
+     inputElement.onclick = function () {
+         inputElement.value = 'Event Listened';
+     }
+
+     // EVENT LISTEN FOR FULL NAME
+     submitBtn.onclick = function () {
+         fullName.value = firstName.value + ' ' + lastName.value;
+     }
+
+     // EVENT LISTEN FOR CREATING BOX
+     var height = document.getElementById('height');
+     var width = document.getElementById('width');
+     var color = document.getElementById('color');
+     var boxBtn = document.getElementById('boxBtn');
+     boxBtn.onclick = function () {
+         var divElement = document.createElement('div');
+         divElement.style.height = height.value + 'px';
+         divElement.style.width = width.value + 'px';
+         divElement.style.backgroundColor = color.value;
+         divElement.style.float = 'left';
+         divElement.style.marginRight = '10px';
+         divElement.style.marginBottom = '10px';
+         document.getElementById('result').append(divElement);
+     }
+
+     // === BELLOW 3 TYPES OF EVENT LISTENING ARE SAME ===
+     // button.onclick = function () {
+     //    alert('You clicked on Click me button.');
+     // }
+
+     // button.addEventListener('click', function () {
+     //     alert('You clicked on Click me button.');
+     // })
+
+     // button.addEventListener('click', clickMeAlert);
+     // function clickMeAlert()
+     // {
+     //     alert('You clicked on Click me button.');
+     // }
+
+     // ==== JS SYNTAX ======
+
+    // To print something in the DOM
+    // document.write('<h1>This is Mahmud</h1>');
+
+   // === ALERT ===
+   // window.alert('Hello');
+
+   // NOTE: we can call window class functions without window object
+   //  alert('Hello');
+
+     // ==== JS VARIABLES & DATA TYPE ======
+
+     // === CONCATENATION ===
+
+    // var firstName = 'Bitm';
+    // var lastName = 'Basis';
+    // document.write('Full name is ' + firstName + ' ' + lastName);
+
+
+    // === PRINTING DATA TYPE ===
+    // var string = 'Hello World';
+    // document.write(typeof string);
+   // Note: IN JS each and every kind of number like integer, float, double is a data type of number
+
+    // === JAVASCRIPT ARRAY & FOR IN LOOP ===
+    // var arr = [1, 2, 3, 'Basis', true]
+
+    //  document.write(arr[3]);
+    //  document.write('<br>');
+    // for(var key in arr)
+    // {
+    //     document.write(arr[key] + ' ');
+    // }
+
+   // JS OBJECT: We can't make associative array in javascript. To store multi dimensional data,
+   // generally we use JS object.
+
+     // === JSON OBJECT ===
+     // var student = { name: 'Mahadi', age: 8 };
+
+    // === JSON ARAAY ===
+    // var students = [
+    //     { name: 'Mahadi', age: 8, address: 'Taltota' },
+    //     { name: 'Mahmud', age: 18, address: 'Dhaka' },
+    //     { name: 'Redoan', age: 38, address: 'Mirpur' },
+    //     { name: 'Islam', age: 58, 'address' : 'Banladesh' },
+    // ];
+
+    // document.write(students[0].name + "</br>");
+    // document.write(students[0].age + "</br>");
+    // document.write(students[0].address + "</br>");
+
+    //  for (var key in students)
+    // {
+    //     document.write(students[key].name + " " + students[key].age + " " + students[key].address + "</br>");
+    // }
+
+
+</script>
+<script src="assets/js/bootstrap.bundle.js"></script>
+</body>
+</html>

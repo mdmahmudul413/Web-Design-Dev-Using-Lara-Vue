@@ -629,10 +629,55 @@
 
     1. The idle practice is database table column name and input field name should be same.
 
+    2. categories table fields
+
+        Schema::create('categories', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('description');
+            $table->text('image');
+            $table->tinyInteger('status')->default(1);
+            $table->timestamps();
+        });
+
 
 ## **Class 27 (Sub Category, Brand, Unit Crud)**
 
     1. The idle practice is database table column name and input field name should be same.
+    
+    2. sub_categories table fields
+
+        Schema::create('sub_categories', function (Blueprint $table) {
+            $table->id();
+            $table->integer('category_id');
+            $table->string('name');
+            $table->text('description');
+            $table->text('image');
+            $table->tinyInteger('status')->default(1);
+            $table->timestamps();
+        });
+
+     3. brands table fields
+	
+        Schema::create('brands', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->text('description');
+            $table->text('image');
+            $table->tinyInteger('status')->default(1);
+            $table->timestamps();
+        });
+
+     4. units table fields
+
+        Schema::create('units', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('code');
+            $table->text('description');
+            $table->tinyInteger('status')->default(1);
+            $table->timestamps();
+        });
 
 
 ## **Class 28 (Product Module Crud)**
@@ -640,6 +685,37 @@
     1. Product Short Descriptions and long descriptions are firstly written in MS word.
     
     2. We have to use smart editor in the description field. 
+
+    3. products table fields
+
+        Schema::create('products', function (Blueprint $table) {
+            $table->id();
+            $table->integer('category_id');
+            $table->integer('sub_category_id');
+            $table->integer('brand_id');
+            $table->integer('unit_id');
+            $table->string('name');
+            $table->string('code');
+            $table->integer('stock_amount');
+            $table->integer('regular_price');
+            $table->integer('selling_price');
+            $table->text('short_description');
+            $table->longText('long_description');
+            $table->text('image');
+            $table->tinyInteger('status')->default(1);
+            $table->integer('hit_count')->default(0);
+            $table->tinyInteger('featured_count')->default(0);
+            $table->timestamps();
+        });
+
+     4. other_images table fields
+	
+        Schema::create('other_images', function (Blueprint $table) {
+            $table->id();
+            $table->integer('product_id');
+            $table->text('image');
+            $table->timestamps();
+        });
     
 
 ## **Class 29 (Product update)**
@@ -661,11 +737,68 @@
 ## **Class 31 (Cart)**
 
     1. We are using darryldecode package to create cart system
+   
+    2. For instruction visit: https://github.com/darryldecode/laravelshoppingcart
 
 
 ## **Class 32 (Checkout)**
 
     1. $table->text('order_timestamp') this field is for converting the order date into a number for reporting purpose.
+    
+    2. We need 3 tables for checkout. They are customers, orders, order_details table
+    
+    3. customers table fields
+    	
+            Schema::create('customers', function (Blueprint $table) {
+                $table->id();
+                $table->string('name');
+                $table->string('email')->unique();
+                $table->string('password');
+                $table->string('mobile')->unique();
+                $table->string('image')->nullable();
+                $table->string('nid')->unique()->nullable();
+                $table->string('dob')->nullable();
+                $table->string('blood_group')->nullable();
+                $table->string('address')->nullable();
+                $table->string('status')->nullable();
+                $table->timestamps();
+            });
+                
+    4. orders table fields
+        
+            Schema::create('orders', function (Blueprint $table) {
+                $table->id();
+                $table->integer('customer_id');
+                $table->integer('order_total');
+                $table->integer('tax_total');
+                $table->integer('shipping_total');
+                $table->text('order_date');
+                $table->text('order_timestamp');
+                $table->string('order_status')->default('pending');
+                $table->text('delivery_address');
+                $table->string('delivery_status')->default('pending');
+                $table->text('delivery_date')->nullable();
+                $table->text('delivery_timestamp')->nullable();
+                $table->string('payment_method');
+                $table->string('payment_status')->default('pending');
+                $table->text('payment_date')->nullable();
+                $table->text('payment_timestamp')->nullable();
+                $table->string('currency')->nullable();
+                $table->text('transaction_id')->nullable();
+                $table->timestamps();
+            });
+            
+    5. order_details table fields
+    
+            Schema::create('order_details', function (Blueprint $table) {
+                $table->id();
+                $table->integer('order_id');
+                $table->integer('product_id');
+                $table->string('product_name');
+                $table->integer('product_price');
+                $table->integer('product_quantity');
+                $table->timestamps();
+            });
     
 
 ## **Class 33 (Form Validation, Error Handling , Customer Authentication)**
@@ -683,6 +816,155 @@
         b. Middleware register
         c. Middleware use
         
+    2. To make middleware
+    
+        command: php artisan make:middleware CustomerMiddleware
+
+
+## **Class 35 (print invoice)**
+
+    1. We will use DomPDF package to print invoice
+    
+        For Instruction: https://www.itsolutionstuff.com/
+    
+    2. We can't extend master from print.blade.php file
+    
+    3. we can download all types of jquery plugin from "jqueryscript.net" 
+
+
+## **Class 36 (Basic JS)**
+
+    1. Js is a language which does not have any substitute language.
+    
+    2. There are 2 other language which also don't have substitute language which are HTML and CSS.
+    
+    3. JS is fully object oriented scripting language. It means to do anything in JS, there is function which will be called.
+    
+    4. And we can't use those functions directly. We always have to call the functions using relative object.
+    
+    5. There are total 4 types of practice in JS
+    
+        a. Raw JS (ECMA-5)
+        b. JS Library (jQuery)
+        c. JS Framework
+            - FrontEnd Framework
+                - AngularJS
+                - ReactJs (We can built anything except social media using ReactJs)
+                - ViewJs
+                
+            - BackEnd Framework
+                - NodeJs
+                
+                Note: Javascript become top rated language in the world because of NodeJs. Because before without help of any server
+                 language, javascript can not work with database directly. But now NodeJs eleminates this limitation and make Javascript
+                  top class programming language in the world.
+                  
+        d. JS Process (Ajax)
+        
+        
+    ========================
+    <<< ==== RAW JS ==== >>>
+    ========================
+        
+        1. We need to practice,
+            
+            a. JS Syntex
+                - We can write js code inside .php, .js, .html, etc.
+                - We have to write js code in the <script> tag inside .php and .html file
+              
+              Note: Ideal practice is to take script tag just before </body>
+              
+            b. JS Variable & DataType
+                
+                3 major rules for declaring variable
+                    - Starts with var/let/const
+                    - a-z, A-Z, 0-9, _, $
+                    - no number in first
+                
+                3 minor rules
+                    - Lower case
+                    - Meaningfull
+                    - Readable
+                    
+            c. JS Operator
+                - Arithmetic: +, -, *, /, %, ++, --, (-)
+                - Assignment: =, +=, -=, *=, %=, /=
+                - Conditional: >, <, >=, <=, ==, !=, ===, !==
+                - Logical: &&, ||, !
+                
+            d. JS Statement
+                - Single Line Statement: Line by line execution
+                - Conditional Statement: if, if else, if else if, switch
+                - Repeated Statement: for, while, do while, for in(work with array)
+                
+            e. JS Array
+                Note: In JS we can not make associative array directly, we have to JS object/JSON object
+                
+            f. JS Object/JSON Object
+            g. JS Event & Listener
+            h. JS Basic Input & Output
+            
+            
+        =========================================    
+        ===== There are 3 types of elements =====
+        =========================================
+        
+            1. Opening Closing Tag Elements
+                Example: h1 tag (Value comes from between opening & closing tag)
+            
+            2. Attribute Type Elements
+                Example: image tag (Value comes from attribute)
+            
+            3. Input Type Elements
+                Example: input tag (Value comes from value attribute)
+        
+
+## **Class 38 (jQuery)**
+    
+    ======================================================================
+        When we writing something in the input field then hover, click,
+                keyup, blur, etc event fired at the same time.
+    ======================================================================
+        
+    1. Difference Between Class, Library and Framework
+        
+        a. Class: Class is an incomplete specification of object.
+        
+        b. Library: Library is a complete class.
+        
+        c. Framework: Framework is built with multiple library. But every framework has a main library(Core library).
+        
+        
+    2. JS and jQuery both do same task. Both makes a website interactive. 
+    
+    3. Because of both do the same task, then why we should learn jQuery?
+    
+        There are 3 major reasons to learn jQuery
+        
+            a. Cross browser issue: When we work with pure JS, we have to always cross check. On the other hand, because of all the funtions are written in
+             the jQuery file, we don't need to cross check when we use jQuery instead of pure JS.
+             
+             b. Minimum lines of codes, maximum outputs.
+             
+             c. Huge libraby
+             
+           Note: Nowadays the value of jQuery is decreasing because of the front end frameworks.
+            
+            
+    4. JS built in fuctions definitions are written in browser. 
+    
+    5. JS can't run without a html file.
+    
+    6. jQuery Basic Syntax: $(selector).action();
+    
+            $           = jQuery Object Sign
+            selector    = To grab html element by id, class, etc
+            .           = JS object sign
+            action()    = jQuery Method
+            
+    7. When we writing something in the input field hover, click, keyup, blur, etc event fired.
+    
+    8. Regular Expression is a JS class.
     
     
     

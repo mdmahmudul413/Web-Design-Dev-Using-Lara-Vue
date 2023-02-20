@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Basic</title>
+</head>
+<body>
+<div class="container mt-3">
+    <h1 id="h1Element">jQuery Form Validation</h1>
+    <form action="test.html" method="POST" id="regform">
+        <table>
+            <tr >
+                <th style="text-align: start;">Name &nbsp;&nbsp;&nbsp;</th>
+                <td>
+                    <input type="text" id="name"/>
+                    <span style="color: red;" id="nameError"></span>
+                </td>
+            </tr>
+            <tr>
+                <th style="text-align: start;">Email &nbsp;&nbsp;&nbsp;</th>
+                <td>
+                    <input type="email" id="email"/>
+                    <span style="color: red;" id="emailError"></span>
+                </td>
+            </tr>
+            <tr>
+                <th style="text-align: start;">Password &nbsp;&nbsp;&nbsp;</th>
+                <td>
+                    <input type="password" id="password"/>
+                    <label><input type="checkbox"><span id="passwordText">Show Password</span></label>
+                    <span style="color: red;" id="passwordError"></span>
+                </td>
+            </tr>
+            <tr>
+                <th style="text-align: start;">Confirm Password &nbsp;&nbsp;&nbsp;</th>
+                <td>
+                    <input type="password" id="confirmPassword"/>
+                    <span style="color: red;" id="confirmPasswordError"></span>
+                </td>
+            </tr>
+            <tr>
+                <th style="text-align: start;">Mobile &nbsp;&nbsp;&nbsp;</th>
+                <td>
+                    <input type="number" id="mobile"/>
+                    <span style="color: red;" id="mobileError"></span>
+                </td>
+            </tr>
+            <tr>
+                <th></th>
+                <td><input type="submit" id="submitBtn"/></td>
+            </tr>
+        </table>
+    </form>
+</div>
+<script src="js/jquery-3.6.3.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
