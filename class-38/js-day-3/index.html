@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+<!--printing property with html tag-->
+<span v-html="test"></span>
+
+<!--A real life example-->
+<table>
+    <tr>
+        <th>First Name</th>
+        <td>
+            <input type="text" v-model="firstName"/>
+        </td>
+    </tr>
+    <tr>
+        <th>Last Name</th>
+        <td>
+            <input type="text" v-model="lastName"/>
+        </td>
+    </tr>
+    <tr>
+        <th>Full Name</th>
+        <td>
+            <input type="text" v-model="fullName"/>
+        </td>
+    </tr>
+    <tr>
+        <th></th>
+        <td>
+            <input type="Submit" value="Make Full Name" @click="makeFullName"/>
+        </td>
+    </tr>
+</table>
+
+<!--print message property-->
+    <h1>{{message}}</h1>
+
+<!--
+    <input type="text" value="{{message}}">
+    It will not work in value attribute {{message}} that's why, we have to use v-model
+-->
+
+    <!--two way data binding-->
+    <input type="text" v-model="message">
+
+<!--print data from students array-->
+    <h1>{{students[0]}}</h1>
+
+<!--print data from student object-->
+    <h1>{{'Name: ' + student.name + ' Email: ' + student.email + ' Mobile: ' + student.mobile}}</h1>
+
+<!--VueJs if else-->
+    <h1 v-if="check1">{{x}}</h1>
+    <h1 v-if="check2">{{y}}</h1>
+
+    <h1 v-if="check3">If check3 true: {{x}}</h1>
+    <h1 v-else>If check3 false: {{y}}</h1>
+
+<!--printing an array in VueJs-->
+    <span v-for="student in students">{{student + ' '}}</span>
+    <br><br>
+
+<!--printing an JSON array in VueJs-->
+    <ul>
+        <li v-for="person in persons">Name: {{person.name}}, Email: {{person.email}}, Mobile: {{person.mobile}}</li>
+    </ul>
+
+<!--we can call functions in two ways in vuejs-->
+    <button type="button" v-on:click="one">Alart</button>
+    <button type="button" @click="two">10 + 20</button>
+
+</div>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    // Creating Vue main library/class object link php $student = new Student();
+    // createApp is a variable. Double curly means its a reserve word which we can use globally
+    const { createApp } = Vue
+
+    createApp({
+        // data() is a method which returns a object which is use for property
+        data(){
+            return {
+                firstName: '',
+                lastName: '',
+                fullName: '',
+                message: 'Hello VueJs',
+                x: 10,
+                y: 20,
+                z: '',
+                students: ['Anwar', 'Riyad', 'Zahid', 'Habib'],
+                student: {'name': 'Anwar', 'email': 'anwar@gmail.com', 'mobile': '1234567890'},
+                persons: [
+                    {'name': 'Anwar', 'email': 'anwar@gmail.com', 'mobile': '234423890'},
+                    {'name': 'Riyad', 'email': 'riyad@gmail.com', 'mobile': '23423467890'},
+                    {'name': 'Zahid', 'email': 'zahid@gmail.com', 'mobile': '123456242'},
+                ],
+                check1: true,
+                check2: false,
+                check3: false,
+                test: '<h1>Hello Everyone</h1>',
+            }
+        },
+        methods: {
+            one(){
+                alert('Hello World');
+            },
+            two(){
+                // console.log('Hi');
+                this.z = this.x + this.y;
+                alert(this.z);
+            },
+            makeFullName(){
+                this.fullName = this.firstName + ' ' + this.lastName;
+            }
+        }
+    }).mount('#app')
+</script>
+</body>
+</html>

@@ -919,7 +919,7 @@
                 Example: input tag (Value comes from value attribute)
         
 
-## **Class 38 (jQuery)**
+## **Class 37 (jQuery)**
     
     ======================================================================
         When we writing something in the input field then hover, click,
@@ -965,6 +965,578 @@
     7. When we writing something in the input field hover, click, keyup, blur, etc event fired.
     
     8. Regular Expression is a JS class.
+
+
+## **Class 38 (VueJs Basic)**
+    
+    ======================================================
+    ====  VueJs Basic (Working With Single HTML File) ====
+    ======================================================
+        
+    1. To work with VueJs in a single html file, we will use the core library CDN of vuejs
+    
+    2. In this part, we will cover bellow things,
+    
+        a. Single html file VueJs install
+        b. Object create and mount
+        c. Single property declear and use
+        d. Array and object declear and use
+        e. Method declear and use
+        f. Event initialize
+        g. if, else
+        h. Loop
+        i. Two way data binding
+        j. html rendaring in VueJs
+
+
+## **Class 39 (Vue CLI)**
+    
+    ======================================================
+    ======================  Vue CLI ======================
+    ======================================================
+        
+    1. To installing vue cli, we have to be main admin of the machine.
+    
+    2. Vue CLI projects will build instead of interpret.
+    
+    3. For installing Vue Cli, there must be installed NodeJs.
+    
+    4. What is NodeJs?
+        
+        NodeJs is a runtime server of JS.
+        
+    5. JS file can't run without the help of html file.
+    
+    6. But if JS want to run without the help of html file then which will be the server for interpreting JS code.
+       In this case by the help of NodeJs, JS can run without the help html file. NodeJs basically create a server 
+       for JS to run. 
+       
+    7. NPM stands for Node Package Manager. It is mainly dependency manager for JS like composer for php. 
+    
+    8. Now, to install vue cli. Just make a command 'npm install -g @vue/cli' from any where in the pc.
+        
+        Note: Vue CLI installation recommanded for one time.
+        
+    9. To create VueJs project using Vue Cli, make a command like bellow,
+    
+        command: vue create test-app
+        
+      Note: Some rules should be followed to create a project.
+        
+        a. Project name should be in lower case.
+        b. Multiple word differentiate with hypen(-)
+        
+        
+    10. After making the command follow the instruction bellow
+    
+        ==============================================
+               Select "Manually select features"
+        ==============================================
+        
+            Vue CLI v5.0.8
+            ? Please pick a preset: (Use arrow keys)
+              Default ([Vue 3] babel, eslint)
+              Default ([Vue 2] babel, eslint)
+            > Manually select features
+            
+            
+        ==============================================
+           Select Babel, Router, Linter / Formatter
+        ==============================================
+            
+            Vue CLI v5.0.8
+            ? Please pick a preset: Manually select features
+            ? Check the features needed for your project: (Press <space> to select, 
+            <a> to toggle all, <i> to invert selection, and <enter> to proceed)
+            >(*) Babel
+             ( ) TypeScript
+             ( ) Progressive Web App (PWA) Support
+             (*) Router
+             ( ) Vuex
+             ( ) CSS Pre-processors
+             (*) Linter / Formatter
+             ( ) Unit Testing
+             ( ) E2E Testing
+            
+            
+        ==============================================
+                            Select 3.x
+        ==============================================
+            
+            Vue CLI v5.0.8
+            ? Please pick a preset: Manually select features
+            ? Check the features needed for your project: Babel, Router, Linter
+            ? Choose a version of Vue.js that you want to start the project with (Use arrow keys)
+            > 3.x
+              2.x
+            
+           
+        ==================================================
+            Select "ESLint with error prevention only"
+        ==================================================
+            
+            
+            Vue CLI v5.0.8
+            ? Please pick a preset: Manually select features
+            ? Check the features needed for your project: Babel, Router, Linter
+            ? Choose a version of Vue.js that you want to start the project with 3.x
+            ? Use history mode for router? (Requires proper server setup for index fallback in production) Yes
+            ? Pick a linter / formatter config:
+            > ESLint with error prevention only
+              ESLint + Airbnb config
+              ESLint + Standard config
+              ESLint + Prettier
+        
+          Note: History mode is user friendly because of only slash '/' will apear in the url. Otherwise in Hash mode, '#' will appear.
+               
+        ==================================================
+                        Select "Lint on save"
+        ==================================================
+                
+            Vue CLI v5.0.8
+            ? Please pick a preset: Manually select features
+            ? Check the features needed for your project: Babel, Router, Linter
+            ? Choose a version of Vue.js that you want to start the project with 3.x
+            ? Use history mode for router? (Requires proper server setup for index fallback in production) Yes
+            ? Pick a linter / formatter config: Basic
+            ? Pick additional lint features: (Press <space> to select, <a> to toggle all, <i> to invert selection, and <enter> to
+            proceed)
+            >(*) Lint on save
+             ( ) Lint and fix on commit
+            
+    
+        ==================================================
+                     Select "In package.json"
+        ==================================================
+                
+            Vue CLI v5.0.8
+            ? Please pick a preset: Manually select features
+            ? Check the features needed for your project: Babel, Router, Linter
+            ? Choose a version of Vue.js that you want to start the project with 3.x
+            ? Use history mode for router? (Requires proper server setup for index fallback in production) Yes
+            ? Pick a linter / formatter config: Basic
+            ? Pick additional lint features: Lint on save
+            ? Where do you prefer placing config for Babel, ESLint, etc.?
+              In dedicated config files
+            > In package.json
+    
+        
+        =========================================================
+            Save this as a preset for future projects? (y/N) N
+        =========================================================
+            
+            Vue CLI v5.0.8
+            ? Please pick a preset: Manually select features
+            ? Check the features needed for your project: Babel, Router, Linter
+            ? Choose a version of Vue.js that you want to start the project with 3.x
+            ? Use history mode for router? (Requires proper server setup for index fallback in production) Yes
+            ? Pick a linter / formatter config: Basic
+            ? Pick additional lint features: Lint on save
+            ? Where do you prefer placing config for Babel, ESLint, etc.? In package.json
+            ? Save this as a preset for future projects? (y/N) N
+            
+            
+    ==============================================================================
+    =============  Understading the folder/file structure of VueJs  ==============
+    ==============================================================================
+    
+    
+    a. The file which run first.
+    
+        public/index.html
+        
+    b. Then src/main.js
+    
+        In the src/main.js file,
+         
+            a. import { createApp } from 'vue' 
+            
+                   Note: 1. This is the main class object. Here 'vue' comes from 'node_modules/vue' folder. 
+                         2. In main.js file directory is calculated from 'node_modules'
+                         3. That's why we use just 'vue'
+            
+            b. import App from './App.vue'
+               
+                    Note: 1. Importing App.vue into App object/variable
+                          2. App.vue is a component
+                          3. './' means the same directory & '../' means one step back
+                          4. This is single file component
+                          5. Compared to laravel this is master file
+                          6. Every component has 3 part,
+                              a. template
+                              b. script
+                              c. style
+               
+            c. import router from './router'
+            
+                    Note: 1. Importing router into router object/variable
+                          2. router is mainly a package
+                          3. We select router mood in the vuejs project installation period
+                          4. ./router or ./router/index.js both same
+                          5. index.js run autometically
+            
+            d. createApp(App).use(router).mount('#app')
+                
+                    Note: 1. createApp object take App.vue as a parameter
+                          2. Use router package
+                          3. Finally mount the output into <div id="app"></div> element of index.html file
+
+                    
+    c. App.vue file
+        
+        In App.vue file,
+        
+            1. <router-link to="/">Home</router-link>
+            
+                Note: <router-link> is not a html tag. It's a component which come from router package.
+                
+            2. <router-view/>
+            
+                Note: 1. Compared to laravel, <router-view/> is mainly @yield('body')
+                      2. When <router-view/> execute, it calls src/router/index.js file
+                      
+    d. index.js file
+    
+        This file is compared as laravel web.php file
+        
+        In index.js file,
+        
+            1. import { createRouter, createWebHistory } from 'vue-router' 
+            
+                Note: 1. importing 'vue-router' package in createRouter global object
+                      2. createWebHistory is for define history mood
+                      
+            2. import HomeView from '../views/HomeView.vue'
+            
+                Note: 1. importing HomeView.vue component into HomeView object
+                
+                
+            3. Lazy Loaded method is recommanded for loding component
+            
+            4. /* webpackChunkName: "home" */ this is called magic comment
+
+
+## **Class 40 (VueJs Template Mastering)**
+    
+    ======================================================
+    =============  VueJs Template Mastering  =============
+    ======================================================
+    
+    After being installed VueJs, there are some basic change in the structure like laravel
+    
+        1. Remove nav from App.vue
+        
+        2. Remove the codes of style from App.vue
+        
+        3. Add script tag and inside the tag,
+        
+            <script>
+                export default {
+                  name: "App",
+                }
+            </script> 
+            
+        4. Goto index.js and add lazzy loading
+        
+        5. Goto HomeView.vue component and remove img, HelloWorld & add a style tag
+        
+        6. Now open template index.html file
+        
+        7. copy the body part and past it into HomeView.vue
+        
+        8. copy asset folder from template and past it into public folder inside project.
+        
+        9. App.vue is the mother component of all component. It will mount to the index.html. so that we have to link css 
+           and js file to the index.html file.
+           
+        10. we add product category page and product detail page
+        
+        11. so, make route first
+            
+            {
+               path: '/product-category',
+               name: 'category',
+               component: () => import(/* webpackChunkName: "category" */ '../views/CategoryView.vue')
+            }
+        
+        12. Now, we have to create CategoryView component.
+        
+            Note: To make components, there are two folders in the src folder
+            
+                a. components: This is for child components.
+                b. views: This is for main components. The components which are load directly from route.
+                
+                
+        13. After creation of CategoryView, first of all the standard practice is bellow,
+        
+            <template>
+                <div class="category-view">
+                    
+                </div>
+            </template>
+            
+                 
+    ======================================================
+    ==============  Main Mastering Concept  ==============
+    ======================================================
+    
+        14. According to vuejs the components which are commonly use in every like header, footer pages will be situated in,
+        
+            'src/components/includes'
+            
+          Note: Components name and html tag name should not match
+          
+          
+        15. Now the header part will be in 'src/components/includes/HeaderView.vue'
+        
+        16. Now the footer part will be in 'src/components/includes/FooterView.vue'
+        
+        17. Import HeaderView and FooterView inside App.vue
+        
+            step 1: Import it,
+            
+                import HeaderView from "@/components/includes/HeaderView";
+                import FooterView from "@/components/includes/FooterView";
+                            
+              Note: '@/' its a syntax which will redirect you in the src folder
+              
+            step 2: Define it like,
+                    
+                export default {
+                    name: "App",
+                    components: {HeaderView, FooterView},
+                }
+                    
+            step 3: Use it like,
+            
+                <template>
+                  <HeaderView/>
+                  <router-view/>
+                  <FooterView/>
+                </template>
+                
+        18. Now copy the category html code from template and paste it in the CategoryView component
+        
+        19. change the <a> tag into <router-link> & add to="" instead of href="" attribute. But this is not the right way. we should
+            always use route name. So that we have to change it to :to="{name: 'home'}"
+           
+        
+    ====================================================================================================
+    ============== We should break down every large view component into small components  ==============
+    ====================================================================================================
+    
+        20. For making a large component small, create folder and make componets in the 'components' folder and cut the specific code, 
+            then paste it there.
+      
+      
+      
+    ====================================================================================================
+    ==========================  There is a conflict between jQuery and VueJs  ==========================
+    ====================================================================================================
+    
+        21. When we work with VueJs, sometimes jQuery plugins will not work.
+        
+        22. When a jQuery plugin is not working, we simply have to check id, classes of that specific html element 
+        
+        23. The plugin which is responsible, we have to find it out with the id or class.
+        
+        24. Then search the plugin for vue in the google 
+        
+        25. Install the plugin and cut the JS code from the assets/index.html file and paste it in mounted hook.
+        
+        26. hooks are like constructor method in php. When a project build, The lines of codes which are written in the component
+            will be converted into plain html then hooks are called autometically. 
+
+
+## **Class 41 (Data Transfer with API Laravel-VueJs)**
+    
+    ==============================================================================
+    ===================  Data Transfer with API Laravel-VueJs  ===================
+    ==============================================================================
+    
+        API - Aplication Programming Interface
+        
+        ----------------------------------
+        =========== IN LARAVEL ===========
+        ----------------------------------
+            1. We will use api.php file for routing
+            
+            2. The routes which are written in api.php can be reached from laravel like bellow,
+            
+                In api.php,
+                
+                    Route::get('/test', function () {
+                        return "Hello API";
+                    });
+                    
+                    visit :- http://localhost/Web-Design-Dev-Using-Lara-Vue/class-35/day-35/public/api/test
+                    
+                  Note: We can visit this api using '/api' in the url
+                  
+            3. In this process laravel gives a link to vuejs. When you hit the link, you will get the desired data.
+            
+            4. There is a major security issue of creating API. Because there must be a guard which authenticate the valid person
+               who is requesting data through API.
+               
+            5. In previous version of laravel, these security middleware was manually set by developer. But from laravel 8, the middlewares
+               are set by default
+            
+            6. The middleware configuration is bellow,
+            
+                a. Goto composer.json file. This is the middleware configurational package, 
+                
+                    "require": {
+                        "laravel/sanctum": "^3.0",
+                    },
+                  
+                b. Goto App/Http/kernel.php. This is the middleware,  
+                
+                     protected $middleware = [
+                             \Illuminate\Http\Middleware\HandleCors::class,
+                      ];
+                      
+                c. Goto config/cors.php. This is configuration file. Here we can customize the middleware configuration.
+                
+                    return [
+                        // 'api/*' will be the URL
+                        'paths' => ['api/*', 'sanctum/csrf-cookie'],
+                    
+                        // * means all method like get, post, etc. We can define like 'allowed_methods' => ['GET'],
+                        'allowed_methods' => ['*'],
+                    
+                        // Anyone can get data from this API. We can define like 'allowed_origins' => ['http://anwar.com'], Now only this 
+                           site can access the data.
+                        'allowed_origins' => ['*'],
+                    
+                        'allowed_origins_patterns' => [],
+                    
+                        'allowed_headers' => ['*'],
+                    
+                        'exposed_headers' => [],
+                    
+                        'max_age' => 0,
+                    
+                        'supports_credentials' => false,
+                    
+                    ];
+                    
+            
+            7. Now create a controller name APIController
+            
+            8. Write a function like bellow,
+            
+                public function getAllCategory()
+                    {
+                        return response()->json(Category::all());
+                    }
+                    
+            9. Now hit,
+                
+                http://localhost/Web-Design-Dev-Using-Lara-Vue/class-35/day-35/public/api/test
+                
+                All categories will be returned in a JSON array
+                        
+        ----------------------------------                
+        ============ IN VUEJS ============
+        ----------------------------------
+            10. After successfully creating API from laravel, We have to make API from VueJS
+            
+            11. In vue 2, Vue Resource was used to create API. But now in Vue 3 Axios is used to create API. 
+            
+            12. Install Axios Package from command.
+            
+                command: npm install axios
+                
+            13. Now suppose we want show the categories in the header component.
+            
+            14. Now Goto HeaderView component, script will be like bellow
+            
+                <script>
+                    import axios from 'axios';
+                    export default {
+                        name: "HeaderView",
+                        data(){
+                            return {
+                                categories: [],
+                            }
+                        },
+                        created() {
+                            axios.get('http://localhost/Web-Design-Dev-Using-Lara-Vue/class-35/day-35/public/api/test')
+                            .then( response => {
+                                this.categories = response.data;
+                                console.log(response.data);
+                            });
+                        }
+                    }
+                </script>
+                
+            15. And inside the template tag,
+            
+                <li v-for="(category, index) in categories" :key="index">
+                    <router-link :to="{name: 'category'}">{{category.name}} <i class="lni lni-chevron-right"></i></router-link>
+                    <ul class="inner-sub-category">
+                        <li><a href="product-grids.html">Digital Cameras</a></li>
+                    </ul>
+                </li>
+                
+            16. We can send trending product details through API in same way.
+            
+            17. We can show image by setting image url menually,
+                
+                <img :src="'http://localhost/Web-Design-Dev-Using-Lara-Vue/class-35/day-35/public/' + product.image" alt="#">
+                
+            18. We can pass id in router-link,
+            
+                component,
+                    <router-link :to="{name: 'category', params:{id : category.id}}">
+                        {{category.name}} <i class="lni lni-chevron-right"></i>
+                    </router-link>
+                
+                index.js,
+                    {
+                        path: '/product-category/:id',
+                        name: 'category',
+                        component: () => import(/* webpackChunkName: "category" */ '../views/CategoryView.vue')
+                    },
+                    
+                component,
+                
+                    <script>
+                        export default {
+                            name: "CategoryView",
+                            data(){
+                                return {
+                                    id: this.$route.params.id,
+                                }
+                            },
+                    
+                            created() {
+                                console.log(this.id);
+                            }
+                        }
+                    </script>
+                    
+                  Note: 
+                  
+                    1. After passing id, if there occured any kind of design broken issue or image link is not working then just add
+                        a "/" before all of the affected link. And also modify the css, js link of index.html file.
+                        
+                    2. If id does not change dynamically then, got app.vue file and add :key attribute
+                    
+                        <router-view :key="$route.fullPath"/>
+                
+
+
+                
+            
+        
+  
+          
+        
+    
+            
+            
+        
     
     
     
