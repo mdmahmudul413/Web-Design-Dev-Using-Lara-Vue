@@ -166,7 +166,7 @@
             
             b. import App from './App.vue'
                
-                    Note: 1. Importing App.vue into App object/variable
+                    Note: 1. Importing App.vue mother component into App object/variable
                           2. App.vue is a component
                           3. './' means the same directory & '../' means one step back
                           4. This is single file component
@@ -180,7 +180,7 @@
             
                     Note: 1. Importing router into router object/variable
                           2. router is mainly a package
-                          3. We select router mood in the vuejs project installation period
+                          3. We select router mode in the vuejs project installation period
                           4. ./router or ./router/index.js both same
                           5. index.js run autometically
             
@@ -213,7 +213,7 @@
             1. import { createRouter, createWebHistory } from 'vue-router' 
             
                 Note: 1. importing 'vue-router' package in createRouter global object
-                      2. createWebHistory is for define history mood
+                      2. createWebHistory is for define history mode
                       
             2. import HomeView from '../views/HomeView.vue'
             

@@ -22,3 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/test', [APIController::class, 'getAllCategory']);
 Route::get('/get-trending-product', [APIController::class, 'getAllTrendingProduct']);
 Route::get('/get-category-product/{id}', [APIController::class, 'getCategoryProduct']);
+Route::get('/get-product-by-id/{id}', [APIController::class, 'getProductById']);
+
+Route::post('/new-order', [ApiController::class, 'newOrder'])->name('new-order');
+Route::post('/customer-logout', [ApiController::class, 'logout'])->name('customer-logout');

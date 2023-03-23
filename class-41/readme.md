@@ -45,7 +45,7 @@
                              \Illuminate\Http\Middleware\HandleCors::class,
                       ];
                       
-                c. Goto config/cors.php. This is configuration file. Here we can customize the middleware configuration.
+                c. Goto config/cors.php. This is configurational file. Here we can customize the middleware configuration.
                 
                     return [
                         // 'api/*' will be the URL

@@ -20,11 +20,11 @@
             
         4. Goto index.js and add lazzy loading
         
-        5. Goto HomeView.vue component and remove img, HelloWorld & add a style tag
+        5. Goto views/HomeView.vue component and remove img, HelloWorld & add a style tag
         
         6. Now open template index.html file
         
-        7. copy the body part and past it into HomeView.vue
+        7. copy the body part and past it into HomeView.vue inside template tag 
         
         8. copy asset folder from template and past it into public folder inside project.
         
@@ -62,7 +62,7 @@
     ==============  Main Mastering Concept  ==============
     ======================================================
     
-        14. According to vuejs the components which are commonly use in every like header, footer pages will be situated in,
+        14. According to vuejs, the components which are commonly use in every page like header, footer pages will be situated in,
         
             'src/components/includes'
             

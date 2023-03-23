@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('blood_group')->nullable();
             $table->string('address')->nullable();
             $table->string('status')->nullable();
+            $table->string('token')->nullable();
             $table->timestamps();
         });
     }
