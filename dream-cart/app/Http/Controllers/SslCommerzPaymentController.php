@@ -201,9 +201,9 @@ class SslCommerzPaymentController extends Controller
                     ->where('transaction_id', $tran_id)
                     ->update(['order_status' => 'Processing']);
 
-                $this->customer = Customer::find($order_details->customer_id);
-                Session::put('customer_id', $this->customer->id);
-                Session::put('customer_name', $this->customer->name);
+                // $this->customer = Customer::find($order_details->customer_id);
+                // Session::put('customer_id', $this->customer->id);
+                // Session::put('customer_name', $this->customer->name);
 
                 echo "<br >Transaction is successfully Completed";
                 return redirect('/complete-order')->with('message', 'Order has been placed successfully.');
@@ -214,9 +214,9 @@ class SslCommerzPaymentController extends Controller
              */
 //            echo "Transaction is successfully Completed";
 
-            $this->customer = Customer::find($order_details->customer_id);
-            Session::put('customer_id', $this->customer->id);
-            Session::put('customer_name', $this->customer->name);
+            // $this->customer = Customer::find($order_details->customer_id);
+            // Session::put('customer_id', $this->customer->id);
+            // Session::put('customer_name', $this->customer->name);
 
             return redirect('/complete-order')->with('message', 'Order has been placed successfully.');
         } else {

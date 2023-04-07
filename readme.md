@@ -1,41 +1,183 @@
 ## **Class 1:**
 
-    1. Basic php OOP structure.
-    2. A php OOP project of showing "Hello World" output in the browser.
+    1. Difference between website and Web Application
+        
+        Everybody can access websites. But web application has limited access or predifined access.
+
+    2. we can work with php language in two diferent ways.
+        
+        1.Procedural way 2. Object Oriented way
+
+    3. Procedural Way vs Object Oriented way
+
+        a. Procedural Way: There is no strick rules of programming in the  Procedural way.
+
+        b. Object Oriented way: There is a set of rules of programming in the Object Oriented way.
+
+    4. The main things are about OOP
+
+        a. Class b. Property c. Method d. Object
 
 ## **Class 2:**
 
     1. Changing the port of Apache server.
+
+        There are so many ports in the ram xampp by default run in 80 port on ram. When port 80 is busy. Then we have to change the port to run apache server.
+
+            How to change the port,
+
+                1. Go to xampp control panel > Apache config
+                2. In the file httpd.conf, find the line "Listen 80" and "ServerName    localhost:80"
+                3. Then, change it like "Listen 8080" and "ServerName localhost:8080"
+                4. Then, save it.
+                5. Start the apache server.
+
     2. How to rename a folder.
-    3. How to rename a file name.
-    4. Again basic structure of PHP OOP project of showing "Hello World".
-    5. Capitalized and camelcase.
-    6. Magic Method.
-    7. Own class object($this)
-    8. String sign = ' ', " "
-    9. Composer
-    10. "require", "require-dev", "autoload", "psr-4", "App\\", "app//"
-    11. Suggestion from IDE(phpstrom)
-    12. PHP opening(<?php) and closing(?>) 
+
+        To rename a folder we should follow "php-day-2" or "php_day_2". "php-day-2" is a best practice.
+
+    3. Capitalized and camelcase.
+
+        Class name always should capitalized like "HelloWorld" and variable name should always be camelcase like "$helloWorld".
+
+    4. Magic Method.
+
+        The method that starts with "__" is called magic method. These methods are by default created by php. Magic methods are call automatically when class object is created. We can't change the spelling of magic methods.  example: __construct(){}, __destruct(){} etc.
+
+    5. Own class object($this)
+
+        '$this' is called the own class object. To catch the class property, we have to use '$this' keywords.
+
+    6. String sign = ' ', " "
+
+    7. Composer
+
+        The dependency manager of php. PHP classes are resources. To load or manage php classes we need composer.
+
+    8. "require", "require-dev", "autoload", "psr-4", "App\\", "app//"
+
+        "require" 
+        
+            It contains the 3rd party resource details. Its only holds the details of 3rd party resource. The resources who don't change the file structure.
+
+        "require-dev"
+            
+            It also contains the 3rd party resource details. It holds the details of 3rd party resource and also responsible for the changing of file structure.
+
+        "autoload"
+            
+            From "autoload", we can know how the resources will automatically load.
+
+        "psr-4"
+
+            'psr-4' is a convention. It means its a Constitution of autoloading php resources.
+
+        "App\\"
+        
+            This is the first word of class namespace.
+
+        "app//"
+    
+            This is the name of 'app' folder of our file structure which is the root of 'classes' folder.
+            
+    9. Suggestion from IDE(phpstrom)
+
+        To get suggestion from IDE we have to press ctrl+space.
+
+    10. PHP opening(<?php) and closing(?>) 
+
+        The script where we write only php codes, then if we want to ignore the php closing syntax, we can ignore it.
 
 ## **Class 3:**
 
-    1. Again PHP OOP file structure
     2. include, include_once, require, require_once
+
+        include, include_once 
+        
+            These keywords are used to link that kind of php files where other codes like css, html etc. are available.
+
+        require, require_once
+        
+            These keywords are used to link php files with other php files where only the php codes are available.
+
     3. Object Sign of PHP(->)
+
+        In the form of php language, this is not a right arrow(->). This is php object sign.
+
     4. The standard writing style of creating an object
+
+        The standard style of creating an object of an particular class is the variable name will same to the class name but variable name will be written in camelcase and the class name will be written in the capitalized form.
+
     5. camelCase, capitalized, Zend(The writing styles)
-    6. The most important topic to work with php: 
-        a. Variable b. Operator c. Statement d. Array
+
+        camelCase: $helloWorld, 
+        capitalized: $HelloWorld,  
+        Zend: $hello_world
+
+    6. The most important topic to work with php
+
+        a. Variable 
+        b. Operator 
+        c. Statement 
+        d. Array
+
+        Variable
+
+            variable is not a container. This is actually the name of the memory location.
+
     7. The rules for declaring php variable 
+
+        There are 2 types of rules,
+
+            a. Three major rules
+
+                * Starts with $
+                * We can use a-z, A-Z, 0-9, '-'
+                * No number in first
+
+            b. Three Standard rules(standard rules are same for all language)
+
+                * Start with small letter
+                * Meaning full
+                * Readable
+
     8. variable = property = attribute
+
     9. function = method = behavior
-    10. gettype() (builtin function)
+
+    10. gettype() (built in function)
+
+        This is a built in function of php which return the data type.
+
     11. Data Type
     12. parse error, fatal error
     13. concatenation sign(.)
     14. &nbsp; (To take more than one space)
     15. Operator
+
+
+    
+
+    #
+
+    
+
+    ## gettype(): 
+
+    ## Data Type: Generally 4 types of data in php: 1. integer 2. double 3. string 4. boolean
+
+    ## parse error: parse error means syntax error.
+
+    ## fatal error: fatal error means logical error.
+
+    ## concatenation sign(.): This is the string concatenation sign.
+
+    ## Operator: 4 types of operator
+        a. Arithmetic operator: +, _, *, /, %, ++, __, (-)(negation)
+        b. Assignment operator: =, +=, _=, *=, /=, %=, .=
+        c. Conditional operator: >, <, >=, <=, ==, !=, ===, !==
+        d. Logical operator: &&, || , !
+
 
 ## **Class 4:**
 

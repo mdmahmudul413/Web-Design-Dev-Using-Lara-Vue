@@ -1455,7 +1455,7 @@
      });
 
 </script>
-<script src="{{asset('/')}}website/assets/js/script.js"></script>
+{{-- <script src="{{asset('/')}}website/assets/js/script.js"></script> --}}
 </body>
 
 
