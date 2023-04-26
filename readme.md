@@ -150,34 +150,33 @@
         This is a built in function of php which return the data type.
 
     11. Data Type
+
+        Generally 4 types of data in php: 
+
+            1. integer 
+            2. double 
+            3. string 
+            4. boolean
     12. parse error, fatal error
+
+        parse error: parse error means syntax error.
+
+        fatal error: fatal error means logical error.
+
     13. concatenation sign(.)
+
+        This is the string concatenation sign.
+
     14. &nbsp; (To take more than one space)
+
     15. Operator
 
+        4 types of operator
 
-    
-
-    #
-
-    
-
-    ## gettype(): 
-
-    ## Data Type: Generally 4 types of data in php: 1. integer 2. double 3. string 4. boolean
-
-    ## parse error: parse error means syntax error.
-
-    ## fatal error: fatal error means logical error.
-
-    ## concatenation sign(.): This is the string concatenation sign.
-
-    ## Operator: 4 types of operator
-        a. Arithmetic operator: +, _, *, /, %, ++, __, (-)(negation)
-        b. Assignment operator: =, +=, _=, *=, /=, %=, .=
-        c. Conditional operator: >, <, >=, <=, ==, !=, ===, !==
-        d. Logical operator: &&, || , !
-
+            a. Arithmetic operator: +, _, *, /, %, ++, __, (-)(negation)
+            b. Assignment operator: =, +=, _=, *=, /=, %=, .=
+            c. Conditional operator: >, <, >=, <=, ==, !=, ===, !==
+            d. Logical operator: &&, || , !
 
 ## **Class 4:**
 
