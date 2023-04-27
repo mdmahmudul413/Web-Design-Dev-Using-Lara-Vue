@@ -6,11 +6,11 @@
 
     2. we can work with php language in two diferent ways.
         
-        1.Procedural way 2. Object Oriented way
+        1. Procedural way 2. Object Oriented way
 
     3. Procedural Way vs Object Oriented way
 
-        a. Procedural Way: There is no strick rules of programming in the  Procedural way.
+        a. Procedural Way: There is no strick rules of programming in the Procedural way.
 
         b. Object Oriented way: There is a set of rules of programming in the Object Oriented way.
 
@@ -82,7 +82,7 @@
             
     9. Suggestion from IDE(phpstrom)
 
-        To get suggestion from IDE we have to press ctrl+space.
+        To get suggestion from IDE we have to press ctrl + space.
 
     10. PHP opening(<?php) and closing(?>) 
 
@@ -121,11 +121,11 @@
         c. Statement 
         d. Array
 
-        Variable
+    7. Variable
 
-            variable is not a container. This is actually the name of the memory location.
+        variable is not a container. This is actually the name of the memory location.
 
-    7. The rules for declaring php variable 
+    8. The rules for declaring php variable 
 
         There are 2 types of rules,
 
@@ -141,15 +141,15 @@
                 * Meaning full
                 * Readable
 
-    8. variable = property = attribute
+    9. variable = property = attribute
 
-    9. function = method = behavior
+    10. function = method = behavior
 
-    10. gettype() (built in function)
+    11. gettype() (built in function)
 
         This is a built in function of php which return the data type.
 
-    11. Data Type
+    12. Data Type
 
         Generally 4 types of data in php: 
 
@@ -157,23 +157,24 @@
             2. double 
             3. string 
             4. boolean
-    12. parse error, fatal error
+            
+    13. parse error, fatal error
 
         parse error: parse error means syntax error.
 
         fatal error: fatal error means logical error.
 
-    13. concatenation sign(.)
+    14. concatenation sign(.)
 
         This is the string concatenation sign.
 
-    14. &nbsp; (To take more than one space)
+    15. &nbsp; (To take more than one space)
 
-    15. Operator
+    16. Operator
 
         4 types of operator
 
-            a. Arithmetic operator: +, _, *, /, %, ++, __, (-)(negation)
+            a. Arithmetic operator: +, _, *, /, %, ++, --, (-)(negation)
             b. Assignment operator: =, +=, _=, *=, /=, %=, .=
             c. Conditional operator: >, <, >=, <=, ==, !=, ===, !==
             d. Logical operator: &&, || , !
@@ -185,207 +186,971 @@
 ## **Class 5:**
 
     1. Fatal error: Uncaught ArgumentCountError
+
+        "Fatal error: Uncaught ArgumentCountError: Too few arguments to function App\classes\HelloWorld::__construct(), 
+        0 passed" it means class constructor has some arguments but when class object is created then, no arguments pass.
+
     2. Declaring variable inside function is a bad practice
+
+        Declaring variable inside function is a bad practice. We will declare variable as property inside class.
+
     3. Operator(Definition)
-    4. Arithmetic operator example 
-    5. Statement execution process 
-    6. Pre increment(x++), Post increment(++x)
-    7. Negation
-    8. Assignment operator example 
-    9. Conditional operator example 
-    10. False return blank in PHP
-    11. True return 1 in PHP
-    12. Difference between Logical and other operator
-    13. Behaviour of "&&, "||", "!" 
-    14. Logical operator example 
-    15. 3 types of statement(Single Line, Conditional, Repeated)
+
+        Operators are some special syntax which are used to perform some execution inside our program.
+
+    4. "echo $this->numberOne++;" Statement execution process:
+
+        ==> A statement is created with 4 elements. Every programing language follow this thing.
+
+            The elements are,
+
+                1. syntax or keyword
+
+                2. Value
+
+                    a.fixed value: 10, 20, 30, 40
+                    b.variable value: x = 10, x = 100(Both correct)
+
+                3. Operator
+
+                4. Expression: Expression is created with value and operator.
+
+                    example: x + y = 20
+
+        ==> In the above statement, here:
+
+            1. syntax: "echo", "$", "this", "->", ";"
+            2. Value: "$this->numberOne"(variable value)
+            3. Operator: "++"
+            4. Expression: "numberOne++"
+
+        ==> "echo $this->numberOne++;" this is an statement. A statement executes in the server part by part.
+
+             apache server first execute "echo $this->numberOne" then "++". So that firstly, we will see the general value of numberOne
+             in the browser. Then apache server execute the incrementation "++". The incrementation will execute after the execution
+             of "echo $this->numberOne". So now if we echo numberOne again, we will see the latest value.
+
+        ==> "echo ++$this->numberOne;" Statement execution process: 
+        
+            In this case we will see the latest value in the browser because the incrementation will execute first.
+
+    4. Arithmetic operator(Negation) example 
+
+        Negation,
+
+            x = 1;
+            echo -x;(negation)
+            result = -1
+
+            x = -1;
+            echo -x;(negation)
+            result = 1
+
+    7. Difference between Logical and other operator
+    
+        Other operators work with single value but Logical operator does not work with single value. Logical operator works with condition. 
+
+    8. Behaviour of '&&', '||', '!':
+
+        a. '&&', || operators work with at least two condition.
+
+        b. There is a condition pattern
+            
+             If there are two conditions. The pattern will be 2^2=4 combination. If 3, the pattern will be 2^3=8 combination.
+
+        c. When operator is &&. And there are two conditions.
+        
+            T && T = T
+            T && F = F
+            F && T = F
+            F && F = F
+
+        d. When operator is ||. And there are two conditions.
+
+            T || T = T
+            T || F = T
+            F || T = T
+            F || F = F
+
+    
+    10. False return blank in PHP in the browser.
+
+    11. True return 1 in PHP in the browser.
+
+    15. 3 types of statement
+
+        a. Single Line Statement
+        b. Conditional Statement
+        c. Repeated Statement
+
+    16. Single Line Statement
+
+        $this->numberOne = 10;
+        $this->numberTwo = 20;
+        $this->numberThree = 30;
+        echo $this->numberOne;
+
     16. Syntax of conditional statement(if, if else, if else if, switch)
+
+        Conditional Statement: Conditional Statements will work when a condition is true.
+
+    17. Syntax of conditional statement
+
+        a. if
+        b. if else
+        c. if else if
+        d. switch
+
     17. Behaviour of conditional statement "if else if"
-    18. Example of conditional statement (if, if else, if else if, switch)
-    19. Behaviour of conditional statement "switch"
+
+        This "if else if" conditional scope will execute the first statement which condition is true. After executing the first statement
+        which condition is true, it will not execute the remaining true condition. But if we create the conditional block with only 
+        "if" syntax than, all the true condition statement will execute.
+
+    18. Behaviour of conditional statement "switch"
+
+        When switch get the first true case then, it will find only the 'break;'. So that if we don't use 'break;' then switch will execute all of the statement after the true case.
     
 ## **Class 6:**
 
     1. Works of a constructor
-    2. Repeated Statement(for, while, do while, foreach)
+
+        The main work of a constructor is to assign value to the property. Another is to ensure the database connection.
+
+    2. Repeated Statement
+
+        1.for
+        2. while
+        3. do while
+        4. foreach
+
     3. Repeated statement "for" example
+
+        for ($this->i = 10; $this->i > 15; $this->i++){
+
+            echo $this->message;
+
+        }
+
+        There are three parts in a for loop
+
+            1. Initialization: $this->i = 10;
+
+            2. Condition: $this->i > 15;
+
+            3. Increment/Decrement: $this->i++
+
+            Note: In the for loop if the condition is false, it will not enter the loop block or will not execute the statements inside for loop.
+
     4. Working process of "for" loop
+
+        ==> We will consider the execution of upper for loop.
+
+            There are three parts in a for loop. At first for loop initialize the variable "$this->i = 10;". so now the value of $i is 10.
+            Then it will consider the condition part "$this->i > 15;". If the condition is true then, it will enter the loop block otherwise not.
+            Here condition is false. If the condition was true, it will enter the loop block and execute the statement. After execution now it will
+            consider the increment/decrement part "$this->i++". After increment $i with 1 now the value of $i is 11. Now again it will consider the condition.
+            After that if the condition true, it will  enter the for loop block and execute the statement. Then again it will consider the increment/decrement
+            part. Then it will consider the condition part. And if the condition again true, it will enter the for loop block and execute the statement and so
+            on until the condition false.
+
     5. "for" loop is working anti clock wise behavior
+
+        In the above execution of "for" loop initialization($this->i = 10;) this part will execute only one time. Then condition($this->i > 15;) part
+        will execute. If condition true than, it will enter the loop block then increment/decrement part will execute. Then condition, then loop block
+        then increment/decrement and so on. so it is circling like anti clock wise.
+
     6. Repeated statement "while" example
+
+        $this->i = 100;
+
+        while($this->i < 105){
+             echo $this->i . " ";
+             $this->i++;
+        }
+
+        *** while loop is same as for loop.
+
+            1. Initialization = $this->i = 100;
+            2. condition = while($this->i < 105)
+            3. Increment/Decrement: $this->i++;
+
+            Note: If the condition false, it will not execute the statements inside the loop.
+
+
     7. Ideal practice of writing HTML tag
+
+        The tags that don't not have any closing tag, we should always use a slash(/) at that tag. Example: <br/>, <hr/>
+
     8. Characteristics of "do while"
+
+        do while loop always run at least one time.
+
     9. Difference between "for, while" and "do while"
+
+        for and while loop first check the condition then execute the statements but do while first time
+        without checking the condition at least one time execute the statements. After executing the statements for the first time then
+        "do while" loop check the condition. If condition true "do while" loop will continue iterating and if false "do while" loop 
+        will break the iteration.
+
     10. Difference between "for, while, do while" and "foreach"
+
+        "for, while, do while" is work with single valued property but "foreach" loop is work with multi valued property like array.
+
     11. Array
+
+        Array is collection of data.
+
     12. Example of Array
+
     13. We use 4 types of data in php
+
+        integer, string, double, boolean
+
     14. Warning: Array to string conversion
+
+        If we directly echo an array this type of error will show. We have to consider array index to echo it. Without
+        declaring an associative array, it will start from index 0.
+
     15. Warning: Undefined array key
+
+        It means array key is undefined.
+
     16. Warning: Undefined property
+
+        It means class property key is undefined.
+
     17. How to decrease memory loss in an array 
+
+        We should store big integer like phone number in string form inside an array. It will decrease memory loss.
+
     18. Array Object Sign(=>)
+
     19. The Real Practice of Array(Vary Important)
     
 ## **class 7**
 
-    1. Again Array Example
     2. Built in function "print_r()", "var_dump()"
+
     3. Use of html tag "<pre>"
+
     4. Global Array(Built in) of PHP
-    5. The use of global array $_GET 
+
+        For various reason, we have to pass data globally. For passing data globally, we can not use user created array. Because these user
+        created array's access is limited. In this case we have to use global array. In PHP the global arrays are _POST, _GET, _SERVER, _SESSION, _COOKIE, _REQUEST, _ENV,
+        _FILES.
+
     6. Built in function "header()" and it's meaning
+
+        "header()" function is used To load another file from a specific file. This function accept a string.
+
+        example:
+
+            header("Location: action.php?page=home");
+
+        In this statement,
+
+            action.php   =    a php file
+            ?            =    $_GET
+            page=home    =    $_GET['page'] = 'home'
+
     7. Functionality of isset() 
+
+        This is a built in function. It checks a variable has value or not.
+
     8. The use case of PHP and HTML
+
+        To create a content, we use php and to show that content to the browser, we use html.
+
     9. What is HTML
+
+        It's a tag based markup language. HTMl has 120± tags.
+
     10. Details about HTML default structure 
+
+        <!doctype html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                <title>Document</title>
+            </head>
+            <body>
+                <h1>This is a Heading.<h1/>
+            </body>
+            </html>
+
+            Meaning of each tag:
+            1. <!doctype html>: This determine that which version of html is using.
+            2. <html><html/>: This is the mother tag of html.
+            3. Total two parts in the html file. They are <head><head/> and <body><body/>
+            4. In the <head> section the total things are supporting documents.
+            5. <meta charset="UTF-8">: It mean's all language is supported.
+            6. <meta name="viewport" ....>: To make it responsive.
+            7. <meta http-equiv="X-UA-Compatible" ...>: This is responsible for browser issue.
+            8. <title>Document</title>: It show the title of a page
+            9.<body></body>: what we write inside body will appear in the browser.
+
     11. <link rel="stylesheet" href="style.css"/> Meaning
+
+        rel = relation
+        href = hyper reference
 
 ## **Class-8**
 
-    1. Making a blog array and printing it to a view
-    2. Calling a class from another class
     3. Different way of declaring public property
+
+        public $message
+        public $blog;
+
+        or,
+
+        public $message, $blog;
+
     4. Common contants of any site
+
+        Heading(<h1></h1>, <h2></h2>....), Paragraph(<p></p>), image(<img src="" alt="">).
+
     5. "../" Meaning
-    6. Keyword "include" meaning
+
+        "../" means one step upper directory.
+
     7. What is CSS?
+
+        CSS is a class based stylesheet language.
+
     8. Basic syntex of CSS
+
+        selector{
+            property: value;
+        }
+
     9. Three types of CSS selectors
+
+        Three types of CSS selectors:
+            1. HTML tags
+            2. User defined name
+            3. Special syntex
+
     10. Block level and Inline Elements
 
-## **Class 9**
+        Block level elements grab the full row. But inline elements doesn't grab the full row. It grabs the only the area which consume it's contents.
 
-    1. CSS property margin, padding
+## **Class 9**
+   
     2. The problem of adding additional height & width to the html elements
+
+        When we add height and width to html elements, it does not get only the height & width. It also get same valued border and padding.
+
+        suppose,
+
+            .box-one{
+                height: 300px;
+            }
+
+        So the box one class does not only get 300px heght. it also get 300px border and 300px padding. This is the limitation of html
+
+        But first time the elements do not show the additional border and padding. When we use additional border and padding, 
+        at that time the previous border and padding will add to the additional border or padding. That's why after adding 
+        border or padding, the elements grow bigger and holds the excessive width and break the desired layout.
+
     3. Importance of CSS property "box-sizing: border-box;"
+
+        border-box;": To eliminate the above problem of breaking down the desired layout,
+        we have to use this CSS property "box-sizing: border-box;". This CSS property will remove the auto added
+        border and padding.
+
     4. Disscuss some real life scenario of projects
+
+        When the clients request us to create a website of their business then,
+        our first concern as a web developer, should be the design outline or UI of the desired website. So that the first concern,
+        make the layout structure. After successfully create the layout then the second concern is to create the contents of the
+        website. Contents are like menu, sidebar, articles, paragraph, etc.
+
     5. Disscuss about CSS property Grid, Flex
+
+        There are different types of CSS property to create the initial layout structure of
+        a website name Grid, Flex. Both are popular.
+
     6. Grid system makes the screen full width equally 12 times
+
+        Grid system maintain some rules. It says us to assume the screen full width 100% and divide it equally 12 times. So each portion will grab 8.33% of width. 
+        Now we will maintain the portions to attach the elements to the width. Suppose, manu will holds total 12 portions. So that it will grab 100%
+        of width. Otherwise sidebar will hold 3 portions, so that it will grab 3 X 8.33 = 25% of total width.
+
     7. "border: 2px solid" will take by defaul color black
+
     8. We will not concern about height, our main concern is width
+
     9. CSS Rules for adding common property to the elements [class*='col-']{...}
-    10. Created a basic layout structure using custom grid model
+
+        [class*='col-']
 
 ## **Class 10**
 
     1. Industry Certified Page Layout Structure
-    2. If we mistakenly give wrong value to width of the Content Area
+
+        If we mistakenly give wrong width value to html element. It may be break the layout. To eliminate this problem we have to wrap each and every element inside a row. 
+        This is a global industry certified technic. If we follow this rule, globally none can underestimate us. This is the most important rule of writing any kind of code.
+
+        Example:
+
+            <div class="row">
+                <div class="col-2 h-200">LOGO</div>
+                <div class="col-10 h-200">BANNER</div>
+            </div>
+
     3. Pseudo Element & Pseudo Class
+
+        Pseudo Elements & Pseudo Classes will not work all the time. These will work in while occur a decent scenario.  Example: :before{}, :after{}, :hover{}, etc.
+
     4. Pseudo class, elements writing style in CSS version 2
+
+        In CSS version 2 pseudo classes are written with a single colon ":" and
+        pseudo elements are written with double colon "::".
+
     5. Pseudo class, elements writing style in CSS version 3
+
+        In CSS version 3 pseudo class and elements both are written with single colon ":".
+
     6. Difference between pseudo class and pseudo element
+
+        If we want to change full property of a html element then we use pseudo
+        class. But when we want partial change to a html element then we use pseudo elements.
+
+        Example:
+
+            pseudo class,
+                .test:hover{
+                    color: white;
+                    background-color: red;
+                }
+
+            pseudo element,
+                .test:first-letter{
+                    color: white;
+                    background-color: red;
+                }
+
     7. The work of pseudo element ":after"
+
+        When we use :after pseudo property to a html element, It will add the properties which are
+        written inside ":after" will apply after that particular html element.
+
     8. Standard naming
-    9. We should not wrap everything inside a container class
+
+        Every name has a standard form. Whatever the name is, It can be a class name, element name, etc. example: container, row, col, etc
+
+    9. We should not wrap everything inside a single container class
+
+        Previously we wrap everything inside a single container.But now we should not wrap everything inside a single container class because every section has 
+        different different css property like background color, etc. The sequence is immediate parent of column will row. Then immediate parent of row will container class.
+
+            Example:
+                container > row > column.
+
+            Note: Container will give only the margin of our page.
+
     10. Every html elements has some default margin and padding
+
+        For this reason we should add globally margin, padding zero.
+
+        example:
+
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
     11. Use case of class Column, Row, Container
+
+        Column
+            
+            Column class specifies the element size. It means what the size the element should be. Should it 12 like menu or 2/3 like sidebar.
+
+        Row
+        
+            Row class wraps the columns. It will help not to enter other element to particular element.
+
+        Container
+            
+            Container class gives a row a specific margin.
+
     12. Present standard of making a page SEO friendly(wrap the sections inside semantic tag)
+
+        Now we are using html 5.
+        Previous version of html, we don't think about it. But now we always think about the SEO of a web page. That's
+        why we always wrap every sections inside a specific semantic element. This will make every page SEO friendly.
+        Semantic elements are comes in html 5.
+
+            Example:
+                Header       = <header>...</header>
+                Nabar        = <nav>...</nav>
+                Sidebar      = <aside>...</aside>
+                Main Content = <section>...</section>
+                Footer       = <footer>...</footer>
+
     12. We always give background color in the semantic element
+    
     13. Importance of writing Media Query code
+
+        Media query is used to make web page responsive. A web developer have to
+        write soo much media query. So media query is very important topic for a web developer.
+
     14. The rules of responsive in the small device
+
+        The responsive rules of small devices is to make all elements full width(100%).
+
     15. max-width, min-width, media query syntax
+
+        media query syntax,
+
+        1. @media screen and (max-width: 800px){
+
+           }
+
+        2. @media screen and (min-width: 800px){
+
+           }
+           
     16. media query example
+
+        a. (max-width: 800px)
+        
+            It means @media query css property will apply at maximum width till 800px.
+
+        b. (min-width: 800px)
+            
+            It means @media query css property will apply at minimum width 800px and upper value.
 
 ## **Class 11**
 
     1. Difference between header and include
+
+        Almost both are same. header redirect the compiler to another place but include
+        load another file inside a specific file or location.
+
     2. How to include bootstrap inside our project
+
+        1. Download the zip file from getbootstrap.com
+        2. Extract it
+        3. copy css and js file into our project assets directory
+        4. link bootstrap.css file from css folder inside our page
+        5. add bootstrap.bundle.js file from js folder inside script
+           tag before the closing body tag inside our page.
+
     3. We should have a clear concept about menu bar
+
+        After creating a project we have to update navbar multiple times. So that,
+        we should have a clear idea or concept about our menu or navbar.
+
     4. Making a navbar using bootstrap 5.2
+
+        Bootstrap classes in navbar,
+
+            1. navbar = small padding;
+            2. navbar-nav = disappear bullets + eliminate padding
+            3. nav-link = disappear text decoration + padding + color
+            4. navbar-expand = make manu element Straight
+            5. navbar-dark = manu text color light
+            6. bg-dark = backgroud dark
+            7. me-auto/mx-auto/ms-auto: margin auto from right/  left, right/  left
+
     5. Making dropdown menu using bootstrap 5.2
+
+        Bootstrap use dropdown.js jquery plugin to create dropdown menu. The js codes are written
+        in bootstrap.bundle.js and we just add an attribute 'data-bs-toggle="dropdown"' to use those javascript codes.
+
+        Example
+
+            <li class="dropdown">
+                <a href="" class="nav-link" data-bs-toggle="dropdown">Services</a>
+                <ul class="dropdown-menu">
+                    <li><a href="" class="dropdown-item">Service One</a></li>
+                    <li><a href="" class="dropdown-item">Service Two</a></li>
+                    <li><a href="" class="dropdown-item">Service Three</a></li>
+                </ul>
+            </li>
     6. Bootstrap Spacing(xs, sm, md, lg, xl, xxl)
-    7. Making carousel slider using bootstrap 5.2
+
+        Bootstrap 5 has a wide range of responsive margin and padding utility classes.
+        They work for all breakpoints
+        
+            xs (<=576px)
+            sm (>=576px)
+            md (>=768px)
+            lg (>=992px)
+            xl (>=1200px)
+            xxl (>=1400px)
+
     8. Standard timing for carousel slider is 1800ms-2200ms
 
 ## **Class 12**
 
     1. Continue from the previous class(class 11)
+
     2. Creating card using Bootsrap 5.2
+
     3. Creating category class
+
     4. Creating product class
+
     5. Categories and Products are dynamically showing in the home page
+
     6. Creating detail.php page
+
     7. The common Bootstrap class of <section> is "py-5"
+
     8. href="action.php?page=detail&&id=5" meaning
+
+        In the $_GET array:
+
+        Array
+        (
+            [page] => detail
+            [id] => 5
+        )
+
+        Note,
+
+            1. ?  =  $_GET[] array
+            2. && =  separator
+
 
 ## **Class 13**
 
     1. Repeat the previous class(class 12)
+
     2. Creating card using Bootsrap 5.2
+
     3. Creating Brand, Category, Home, Product class
+
     4. Categories and Products are dynamically showing in the home page
+
     5. Products can be filtered by Brand wise and Category wise 
 
 ## **Class 14**
 
     1. form-control, form-control-sm, form-control-md, form-control-lg
+
     2. Standard practice is to use </pre> tag when we use <pre> tag
+
     3. Tag name attribute standard
+
+        <input type="text" class="form-control" id="last_number" name="last_number"/>
+
+        Note: We should always use underscore "_" in the name attribute.
+
     4. Creating card using Bootsrap 5.2
+
     5. Created a simple php project that take user input first name, 
        last name and return full name in the input field.
+
     6. Give a Home Work to make a calculator
 
 ## **Class 15**
 
     1. Created a calculator which covers Operator, Statement & OOP
+
     2. Switch is more appropriate for implementing calculator logic
+
+        For implementing calculator logic switch is more appropriate
+        than if else because if else needs to check the condition which consume more time. But switch does not need to check
+        condition and it's faster then if else.
 
 ## **Class 16**
 
-    1. Object Oriented PHP 
     2. Security issues
+
+        We should not give access to all class properties and methods from other files because of
+        the security purpose. To secure the class properties and methods, we use encapsulation process in our class.
+
     3. Encapsulation
+
+        when we declare the class methods and properties public then we can easily access all the properties
+        and methods from other files. But if we add private or protected access modifiers to those properties and methods
+        then, we can not access all the properties and methods. In this way, we can secure our classes. This process is
+        called Encapsulation.
+
     4. Access Modifier(Public, Protected, Private)
-    5. Inheritance 
-    6. Two ways of inheritance 
+
+    6. Two ways of inheritance:
+
+        a. Importing the class
+
+            Example:
+
+                <?php
+                    namespace App\classes;
+
+                    use App\classes\User;
+
+                    class Home
+                    {
+
+                    }
+
+            Note: In this way, we have to create class object.
+
+        b. Extend the parent class
+
+            Example:
+
+                <?php
+                    namespace App\classes;
+                    class Home Extends User
+                    {
+
+                    }
+
+            Note:
+
+                1.In this way, Home is a child class and User is a parent class. And now we don't need to import the class and also no need to make class object.
+
+                2. In this way, we can access the public and protected properties and methods of parent class but private properties and methods can not be accessed by child. 
+
     7. Polymorphism
+
+        When we want to use other class public and protected properties and methods then, we need polymorphism.
+        In this way, we can also modify them.
+
     8. Similarity between inheritance and polymophism
+
+        Inheritance and polymorphism are quite similar. The difference is, by the
+        use of inheritance process we can use the protected and public properties and method of inherited class. On the other hand by the use of polymorphism, 
+        we can also use them and moreover we can modify them.
+
     7. Interface
+
+        We have to use interface inside class. We can not create object of interface inside view file. We can not declare property inside interface. 
+        We can just declare method inside interface but we can not define those methods inside interface file. To use interface to another class, 
+        we have to use "implements" keyword then, inside the class, we have to define those methods which are declared inside interface.
+
+            Example:
+
+                1. Interface: ExampleOne.php
+
+                    <?php
+                        namespace App\classes;
+                        interface ExampleOne
+                        {
+                            public function one();
+                            public function two();
+                            public function three();
+                        }
+                
+                2. class: Home.php
+
+                    <?php
+                        class Home Extends User implements  ExampleOne
+                        {
+                            public function __construct()
+                            {
+                                ...
+                            }
+
+                            public function one()
+                            {
+                                // TODO: Implement one() method.
+                            }
+
+                            public function two()
+                            {
+                                // TODO: Implement two() method.
+                            }
+
+                            public function three()
+                            {
+                                // TODO: Implement three() method.
+                            }
+                        }
+
+            Note: Interface make functions more secure. A single class can implements multiple interfaces.
+
     8. Abstract Class
 
+        We can declare a class abstract for secure the class. We can write anything in the abstract class like a normal class.
+        But we can not create object of abstract class from view. We have to use abstract class inside other class like interface. We have to extend
+        it from other class.
 
 ## **Class 17**
 
     1. Key information of abstract class, interface, etc
+
+        1. We can not directly create object of abstract class and interface.
+        2. We use abstract class and interface in other class.
+        3. To import an interface inside a class, we implements it in that class.
+        4. To import an abstract class inside a class, we have to extends it.
+        5. A class can extends only one class.
+        6. Child class can only access public and protected properties, methods of
+        parent class.
+        7. We can only access public property, methods of a class from view.
+        
     2. Static, non static property and Method
+
+         Example:
+
+            1. Static resource
+
+                public static $contact = '34567';
+
+                public static function edit(){
+                    return "in edit";
+                }
+
+            1. Non static resource
+
+                public $contact = '34567';
+
+                public function edit(){
+                    return "in edit";
+                }
+
     3. Scope resulotion operation(::)
     4. Own class object self
     5. Calling Static property, Methods from view
+
+        We don't need to create object for calling static property, methods from view.
+        We can have it like bellow. But if we create class object and use own class object "$this" to grab static property, method from
+        view, it will also work but this is not the correct way of using static resource from view.
+
+            Example:
+                Home::edit();
+                echo Home::$contact;
+
     6. Trait
+
+        We use trait inside class.
+
     7. We should not create constructor inside abstract class, interface, trait
        etc.
+
+       We should not create constructor inside abstract class, interface, trait etc because we can not create object of these things.
+
     8. Namespace(vertual path/directory of class)
+
     9. Starting Laravel
+
     10. MVC Theory(Model View Controller)
+
+        MVC Theory(Model View Controller): MVC is the international pattern/standard of writing code.
+
+    M = Model(Connected to database)
+    V = View(The representation)
+    C = Controller(Which loads view)
+
+    Note: Model and Controller are in general two different class. The difference is, controller class is work with
+    view using logic but model class is work with data. Model will always connect with database. At first controller
+    gives user a view. Then view will request controller to give data and controller will request model to give
+    that data from database. Finally Model will request database directly for data and sequentially database gives
+    data to model, model to controller and finally controller to view. When we write code in this sequence, this
+    will called MVC pattern.
+
     11. Route
+
+        It decides when and which controller will start to working.
+
     12. The work flow of first load a laravel website
+
+        First will run index.php. Then it will redirect it to route file and route will redirect it to the controller. Then controller will load the view.
+
     13. Laravel Installation
+
+        Laravel Installation prerequisite
+
+            1. Xampp(apache)
+            2. Composer
+            3. Laravel Installer(This is a package like composer)
+
     14. A Huge library of PHP(https://packagist.org/)
-    15. Laravel Installation prerequisite
+
     16. First Demo project installation and run
     17. command: php artisan serve(To create a virtual server to run laravel project)
+
+        When we make this command, Laravel project will build and then run a specific port.
+
     18. public/index.php will run first
+
     19. The work of predefine function define()
+
+        This function declare global variable.
+
     20. Basic Understanding of the lines of code written in public/index.php
+
+        1. Predefined function:  define('LARAVEL_START', microtime(true));
+
+        2. Importing composer: require __DIR__.'/../vendor/autoload.php';
+
+        3. Requiring boot file:  $app = require_once __DIR__.'/../bootstrap/app.php';
+
+            Note: This bootstrap is not css framework bootstrap. This is like a configuration file. Suppose, when we boot our PC, some instruction
+            in the rom which helps to boot up the pc. This bootstrap is kind of that type of instructions which helps laravel to start up.
+            Basically this is a configuration file.
+
+        4. predefine function exit() immediately stop the compiler
+
     21. Predefine function exit() immediately stop the compiler
+
     22. routes folder
+
+        There are four files. They are api.php, channels.php, console.php, web.php. For general request we use web.php.
+
     23. Understanding the web.php file
+
+        1. class: use Illuminate\Support\Facades\Route;
+
+        2.  Route::get('/', function () {
+                return view('welcome');
+            });
+
+        Note: This is a static function of Route class.
+
     24. Requiring vendor/autoload.php is not needed in all view file in laravel
+
+        In public/index.php, 
+        
+            There vendor/autoload.php file is already imported. so that we don't need to require it again.
+
     25. http://127.0.0.1:8000/ This is main domain
+
     26. Main domain represents with "/"
+
     27. PHP Built in function view() mainly return view file
+
+        Both are closely same.
+
+            1. If use route()
+
+                <a href="{{ route('contact') }}">contact</a>
+
+                Note: string will be same as defined the route name.
+
+            2. If use url()
+
+                <a href="{{ url('/contact') }}">contact</a>
+
+                Note: string will be same as defined the url name.
+                Note: route() is recommended
+
     28. .blade is a Blade template engine
+
     29. create controller command: php artisan make:controller HomeController
+
     30. Built in function route() and url()
     
 
 ## **Class 18**
 
     1. public/index.php is mainly a configurational file
+
     2. 127.0.0.1:8000 is a base path or main domain
+
     3. Laravel project will not by default in MVC pattern
+
     4. Controller name standerd
+    
     5. return view('home.index'); meaning
     6. All types of assets(css, js, img) files will be in the public folder
     7. {{asset('')}}/{{asset('/')}} means "http://127.0.0.1:8000/"

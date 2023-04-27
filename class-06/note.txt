@@ -82,4 +82,4 @@ with multi valued property like array.
 
 ##  Warning: Undefined property: It means class property key is undefined.
 
-## How to decrease memory loss in an array:We should store big integer like phone number in string form inside an array. It will decrease memory loss.
+## How to decrease memory loss in an array: We should store big integer like phone number in string form inside an array. It will decrease memory loss.

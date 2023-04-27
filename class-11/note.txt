@@ -41,12 +41,3 @@
 
 ## Bootstrap Spacing(xs, sm, md, lg, xl, xxl):  Bootstrap 5 has a wide range of responsive margin and padding utility classes.
    They work for all breakpoints: xs (<=576px), sm (>=576px), md (>=768px), lg (>=992px), xl (>=1200px) or xxl (>=1400px))
-##
-##
-##
-##
-##
-##
-##
-##
-##

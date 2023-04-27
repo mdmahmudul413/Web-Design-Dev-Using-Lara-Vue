@@ -4,7 +4,7 @@
        or,
        public $message, $blog;
 
-## Common constants of any site: Heading(<h1></h1>, <h2></h2>....), Paragraph(<p></p>), image(<img src="" alt="">).
+## Common contants of any site: Heading(<h1></h1>, <h2></h2>....), Paragraph(<p></p>), image(<img src="" alt="">).
 
 ## "../" Meaning: "../" means one step upper directory.
 
