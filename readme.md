@@ -1150,88 +1150,174 @@
     3. Laravel project will not by default in MVC pattern
 
     4. Controller name standerd
-    
+
+        Controller name standard:
+
+        Example: HomeController
+
+        Note: The word controller will include inside the controller name.
+
     5. return view('home.index'); meaning
+
+        This line will return index file at home directory inside view folder.
+
     6. All types of assets(css, js, img) files will be in the public folder
+
     7. {{asset('')}}/{{asset('/')}} means "http://127.0.0.1:8000/"
+
     8. "http://127.0.0.1:8000/" means root directory or public folder
+
     9. asset('') is a helper method of laravel framework
+
     10. {{ }} double curly brace means <?php echo ?>
+
     11. Mastering(The first priority task of any market place job)
+
     12. We always work with existing template
+
     13. For using existing template, normal bootstrap file link will not work.
         Thats why we do mastering
+
     14. Mastering also decrease same code copy pasting problem
+
     15. Standard name of main mastering file is "master.blade.php"
+
     16. @extends('') is a directive according to laravel which include file
+
     17. @yield('') is also a directive
+
     18. We can only use directives inside .blade file
+
     19. .blade is template engine
+
     20. Template engine means a class or package
+
     21. .blade template engine comes from php framwork name symphony framework
+
     22. .blade make the view files more powerfull
 
 
 ## **Class 19**
 
     1. Repeating previous class with additional topics
+
     2. After downlod laravel, first task is to make it MVC
+
     3. Standard practice is rename file like about.index, contact.index
+
     4. We can convert .webp image to .jpg by rename it .jpg
+
     5. Substr(string, start-index, length) is a php built in function 
+
     6. Full Name form submission Example
+
     7. @csrf token
 
 ## **Class 20**
 
     1. Creating a project of taking user input in a form and save it to database.
+
     2. Standard practice of writing url is like "/blog/add", "/blog/manage"
+
     3. Standard practice of writing route name is like name('blog.add'), name('blog.manage')
+
     4. These standard practices will make website SEO friendly
+
     5. Database Server: The place where we keep our data
-    6. Popular database servers: 1.Oracle 2.MsSQL 3.MySQL 4.MongoDB 5.FireBASE
+
+    6. Popular database servers 
+
+        1.Oracle 
+        2.MsSQL 
+        3.MySQL 
+        4.MongoDB 
+        5.FireBASE
+
     7. The very expensive database server is Oracle 
+
     8. We know MsSQL as SQL Server
+
     9. MsSQL is also a paid database server developed by Microsoft
+
     10. MySQL is open source database server
+
     11. MongoDB and FireBASE are also open source
+
     13. MongoDB is finedly cope up with NodeJS
+
     14. FireBASE s finedly cope up with Android
+
     15. Apache Server url: localhost
+
     16. MySQL Server url: localhost/phpmyadmin
+
     17. MySQL database Server wizard 
+
     18. Every database server has username and password 
+
     19. We can make new user of every database
+
     20. Database name and project name will be same
+
     21. Database naming standard, "day_20", "day_21", etc
+
     22. Table Name: Table name will be always in plural form
+
     23. Column Number: Column number will be minimum one more of the total input fields 
+
     24. Always the first column name will be "id" 
+
     25. Column id will controlled by system and it will be always a primary key(auto increment)
+
     26. Others column name will be as same as given in the name attribute of input fields
+
     27. Most used data types in the column are int, varchar, text, longtext etc
+
     28. varchar data type can contain at most 256 characters
+
+
     29. If we need more then 255 characters then the data type will be "text"
+
     30. If we need more then "text" than the data type will be longtext
+
     31. The long description of ecommerce will be longtext type
+
     32. Image column will be text type
+
     33. Column length 10 means at most 9999999999 row can be create 
+
     34. Int data type blocks the empty memory 
+
     35. Varchar data type does not block the empty memory 
+
     36. We don't have to give length in the text type column
+
     37. "id" column will be attribute = UNSIGNED, index = PRIMARY, A_I = checked
+
     38. Create model with migration command: php artisan make:model Blog -m
+
     39. In laravel every table should have a migration file
+
     40. And every table should also have a model
+
     41. Every migration file has two function up() and down()
+
     42. up() function is responsible for creating table    
+
     43. down() function is responsible for removeing table 
+
     44. id() function will create primary key "id" column
+
     45. In migration file string() function will make varchar type column
+
     46. timestamp() function will make date type column
+
     47. timestamps() function will make two date type columns name created_at & updated_at
+
     48. Executing migration file command: php artisan migrate
+
     49. config/database.php is database configurational file
+
     50. Chrome Extension json viwer installation
 
 ## **Class 21**
@@ -1807,7 +1893,9 @@
                 Note: In JS we can not make associative array directly, we have to JS object/JSON object
                 
             f. JS Object/JSON Object
+
             g. JS Event & Listener
+            
             h. JS Basic Input & Output
             
             
